@@ -39,6 +39,10 @@ Zepto(function() {
      * 普通终端上传图片
      */
     $upload.on('change', function() {
+        var file = $(this)[0].files[0];
+        if(!file) {//undefined
+            return;
+        }
         if(!startLoading()) {
             return;
         }
