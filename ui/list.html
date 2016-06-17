@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/core/flexible.js"></script>
+    <title>list</title>
+    <link href="css/all.css" rel="stylesheet"/>
+    <link href="css/demo.css" rel="stylesheet"/>
+</head>
+<body>
+    <section class="demo-block">
+        <h4 class="demo-title">简单列表 不flex布局</h4>
+        <h6>(simple list does not flex layout)</h6>
+        <ul class="ui-list ui-list-block ui-border-tb">
+            <li class="ui-border-t">
+                <p>1.p标题标题标题</p>
+                <h6>h6内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</h6>
+            </li>
+            <li class="ui-border-t">
+                <h3>1.h3标题标题标题</h3>
+                <h6>h6内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</h6>
+            </li>
+        </ul>
+    </section>
+    <section class="demo-block">
+        <h4 class="demo-title">右边有内容</h4>
+        <h6>(on the right side of the content)</h6>
+        <ul class="ui-list ui-border-tb">
+            <li class="ui-border-t">
+                <div class="ui-col-1">
+                    <h4 class="ui-nowrap">加ui-nowrap可以超出长度截断，加ui-nowrap可以超出长度截断</h4>
+                </div>
+                <div class="ui-badge-success">new</div>
+            </li>
+            <li class="ui-border-t ui-flex-column-center">
+                <div class="ui-col-1">
+                    <h4>设置了上下居中的效果</h4>
+                    <p>设置了上下居中的效果</p>
+                </div>
+                <div>使用中</div>
+            </li>
+        </ul>
+    </section>
+    <section class="demo-block">
+        <h4 class="demo-title">箭头列表(arrow list)</h4>
+        <ul class="ui-list ui-list-link ui-border-tb">
+            <li class="ui-border-t active">
+                <h4 class="ui-col-1">选中特效选中特效选中特效选中特效选中特效选中特效选中特效选中特效选中特效选中特效选中特效选中特效</h4>
+            </li>
+            <li class="ui-border-t ui-flex-column-center">
+                <div class="ui-col-1">
+                    <h4 class="ui-nowrap">生日</h4>
+                    <p>设置了上下居中的效果</p>
+                </div>
+                <div class="ui-color-info">1988年8月8日</div>
+            </li>
+        </ul>
+    </section>
+    <section class="demo-block">
+        <h4 class="demo-title">图文一行列表</h4>
+        <h6>(graphics and textures line list)</h6>
+        <ul class="ui-list ui-list-link ui-border-tb">
+            <li class="ui-border-t ui-flex-column-center">
+                <div class="ui-width-10 ui-list-img">
+                    <img src="assets/img/bac.jpg"/>
+                </div>
+                <h4 class="ui-nowrap ui-col-1">性别</h4>
+                <div class="ui-color-info">男</div>
+            </li>
+        </ul>
+    </section>
+
+    <div class="ui-loading-wrap">
+        <p>加载中(Loading)</p>
+        <i class="ui-loading"></i>
+    </div>
+</body>
+</html>

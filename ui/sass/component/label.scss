@@ -1,0 +1,31 @@
+@import "../helper/mixin";
+
+%ui-label {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  &:active{
+    background-color: #f3f2f2;
+  }
+}
+@mixin _label($name, $color, $padding:2px 5px, $width:1px) {
+  .ui-label-#{$name} {
+    @extend %ui-label;
+    @include border(border, $color, $width);
+    color: $color;
+    padding: $padding;
+    &::before{
+      position: absolute;
+      content: "";
+      @include border(border, $color, $width/2);//Android不会读小数 解决IOS四个边框宽度会不同
+      left:0;
+      top:0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+@include _label(important, $color-important);
+@include _label(success, $color-success);
+@include _label(warning, $color-warning);

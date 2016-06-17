@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+/***********************************************************************************************************************
+* flex相关
+************************************************************************************************************************/
+
+/**
+* 工具会忽略-webkit-box-align属性
+*/
+
+/**
+* 上下左右居中
+*/
+
+/***********************************************************************************************************************
+* 文字相关
+************************************************************************************************************************/
+
+/**
+* 自动截取
+*/
+
+/**
+* Flex中自动截取
+*/
+
+/**
+* 自定义ICON
+*/
+
+/**
+* 列表中的小箭头
+*/
+
+/**
+* 列表中的小箭头 默认样式
+*/
+
+/***********************************************************************************************************************
+* CSS3属性兼容性
+************************************************************************************************************************/
+
+/**
+* Retina屏幕
+*/
+
+/***********************************************************************************************************************
+* border相关
+************************************************************************************************************************/
+
+/**
+* 1px兼容问题
+*/
+
+/***********************************************************************************************************************
+* 标签相关
+************************************************************************************************************************/
+
+/***********************************************************************************************************************
+* 基础样式
+************************************************************************************************************************/
+
+.ui-btn,
+.ui-btn-lg,
+.ui-btn-sm {
+  position: relative;
+  text-align: center;
+  background: #fdfdfd;
+  color: #00a5e0;
+  box-sizing: border-box;
+  vertical-align: top;
+  border: 1px solid #cacccd;
+  border-radius: 0.08rem;
+}
+
+.ui-btn:not(.disabled):not(:disabled):active,
+.ui-btn-lg:not(.disabled):not(:disabled):active,
+.ui-btn-sm:not(.disabled):not(:disabled):active,
+.active.ui-btn,
+.active.ui-btn-lg,
+.active.ui-btn-sm {
+  background: #f2f2f2;
+  color: rgba(0, 165, 224, 0.5);
+}
+
+.disabled.ui-btn,
+.disabled.ui-btn-lg,
+.disabled.ui-btn-sm,
+.ui-btn:disabled,
+.ui-btn-lg:disabled,
+.ui-btn-sm:disabled {
+  border: 0;
+  background: #e9ebec;
+  color: #FFF;
+}
+
+/***********************************************************************************************************************
+* 尺寸与边距
+************************************************************************************************************************/
+
+/**
+* 小按钮
+* 26px 110*50
+*/
+
+.ui-btn-sm {
+  height: 0.666667rem;
+  line-height: 0.666667rem;
+  display: inline-block;
+  width: 1.466667rem;
+}
+
+[data-dpr="1"] .ui-btn-sm {
+  font-size: 13px;
+}
+
+[data-dpr="2"] .ui-btn-sm {
+  font-size: 26px;
+}
+
+[data-dpr="3"] .ui-btn-sm {
+  font-size: 39px;
+}
+
+/**
+* 普通按钮
+* 30px 110*60
+*/
+
+.ui-btn {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  display: inline-block;
+  min-width: 1.466667rem;
+  padding: 0 0.293333rem;
+}
+
+[data-dpr="1"] .ui-btn {
+  font-size: 15px;
+}
+
+[data-dpr="2"] .ui-btn {
+  font-size: 30px;
+}
+
+[data-dpr="3"] .ui-btn {
+  font-size: 45px;
+}
+
+/**
+* 大按钮
+* 36px 100% * 88
+*/
+
+.ui-btn-lg {
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+  display: block;
+  width: 100%;
+  border-radius: 0.133333rem;
+}
+
+[data-dpr="1"] .ui-btn-lg {
+  font-size: 18px;
+}
+
+[data-dpr="2"] .ui-btn-lg {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .ui-btn-lg {
+  font-size: 54px;
+}
+
+/***********************************************************************************************************************
+* 功能类型
+************************************************************************************************************************/
+
+.ui-btn-primary,
+.ui-btn-danger {
+  border: 0;
+  color: #FFF;
+}
+
+.ui-btn-primary:not(.disabled):not(:disabled):active,
+.ui-btn-danger:not(.disabled):not(:disabled):active,
+.active.ui-btn-primary,
+.active.ui-btn-danger {
+  color: #FFF;
+}
+
+/*蓝色*/
+
+.ui-btn-primary {
+  background: #18b4ed;
+}
+
+.ui-btn-primary:not(.disabled):not(:disabled):active,
+.ui-btn-primary.active {
+  background: #1ca7da;
+}
+
+/*红色*/
+
+.ui-btn-danger {
+  background: #f75549;
+}
+
+.ui-btn-danger:not(.disabled):not(:disabled):active,
+.ui-btn-danger.active {
+  background: #e2574d;
+}
+
+/*进度条按钮*/
+
+.ui-btn-progress {
+  width: 1.466667rem;
+  padding: 0;
+  color: #FFF;
+}
+
+.ui-btn-progress .ui-btn-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #18b4ed;
+  border-radius: 0.08rem 0 0 0.08rem;
+}
+
+.ui-btn-progress .ui-btn-inner span {
+  display: inline-block;
+  position: absolute;
+  width: 1.466667rem;
+  left: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .ui-btn,
+  .ui-btn-lg,
+  .ui-btn-sm {
+    border: none;
+    position: relative;
+  }
+
+  .ui-btn::before,
+  .ui-btn-lg::before,
+  .ui-btn-sm::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #cacccd;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  .ui-btn::before,
+  .ui-btn-lg::before,
+  .ui-btn-sm::before {
+    border-radius: 0.16rem;
+  }
+
+  .ui-btn.disabled::before,
+  .ui-btn:disabled::before,
+  .ui-btn-lg.disabled::before,
+  .ui-btn-lg:disabled::before,
+  .ui-btn-sm.disabled::before,
+  .ui-btn-sm:disabled::before {
+    border: 0;
+  }
+
+  .ui-btn-primary::before,
+  .ui-btn-danger::before {
+    border: 0;
+  }
+}

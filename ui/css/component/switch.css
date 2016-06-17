@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/***********************************************************************************************************************
+* flex相关
+************************************************************************************************************************/
+
+/**
+* 工具会忽略-webkit-box-align属性
+*/
+
+/**
+* 上下左右居中
+*/
+
+/***********************************************************************************************************************
+* 文字相关
+************************************************************************************************************************/
+
+/**
+* 自动截取
+*/
+
+/**
+* Flex中自动截取
+*/
+
+/**
+* 自定义ICON
+*/
+
+/**
+* 列表中的小箭头
+*/
+
+/**
+* 列表中的小箭头 默认样式
+*/
+
+/***********************************************************************************************************************
+* CSS3属性兼容性
+************************************************************************************************************************/
+
+/**
+* Retina屏幕
+*/
+
+/***********************************************************************************************************************
+* border相关
+************************************************************************************************************************/
+
+/**
+* 1px兼容问题
+*/
+
+/***********************************************************************************************************************
+* 标签相关
+************************************************************************************************************************/
+
+.ui-switch input::after,
+.ui-switch input::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ui-switch {
+  display: inline-block;
+}
+
+.ui-switch input {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #d5d5d5;
+  -webkit-transition: border .4s;
+  transition: border .4s;
+}
+
+.ui-switch input::after {
+  border-radius: 100%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.ui-switch input::before {
+  background: #fff;
+  box-shadow: #dfdfdf 0 0 0 0 inset;
+  -webkit-transition: border .4s,box-shadow .4s;
+  transition: border .4s,box-shadow .4s;
+}
+
+.ui-switch input:checked {
+  border-color: #18affe;
+}
+
+.ui-switch input:checked::before {
+  box-shadow: #18affe 0 0 0 16px inset;
+  background-color: #18affe;
+  -webkit-transition: border .4s,box-shadow .4s,background-color 1.2s;
+  transition: border .4s,box-shadow .4s,background-color 1.2s;
+}
+
+[data-dpr="1"] .ui-switch input {
+  width: 52px;
+  height: 32px;
+  border-radius: 16px;
+}
+
+[data-dpr="1"] .ui-switch input::after {
+  width: 30px;
+  height: 30px;
+}
+
+[data-dpr="1"] .ui-switch input::before {
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+[data-dpr="1"] .ui-switch input:checked::after {
+  left: 20px;
+}
+
+[data-dpr="2"] .ui-switch input {
+  width: 104px;
+  height: 64px;
+  border-radius: 32px;
+}
+
+[data-dpr="2"] .ui-switch input::after {
+  width: 62px;
+  height: 62px;
+}
+
+[data-dpr="2"] .ui-switch input::before {
+  width: 102px;
+  height: 62px;
+  border-radius: 31px;
+}
+
+[data-dpr="2"] .ui-switch input:checked::after {
+  left: 40px;
+}
+
+[data-dpr="3"] .ui-switch input {
+  width: 156px;
+  height: 96px;
+  border-radius: 48px;
+}
+
+[data-dpr="3"] .ui-switch input::after {
+  width: 94px;
+  height: 94px;
+}
+
+[data-dpr="3"] .ui-switch input::before {
+  width: 154px;
+  height: 94px;
+  border-radius: 47px;
+}
+
+[data-dpr="3"] .ui-switch input:checked::after {
+  left: 60px;
+}

@@ -1,0 +1,28 @@
+@import "../helper/mixin";
+.ui-loading-wrap{
+  @include flexCenter(row);
+  text-align: center;
+  p {
+    margin: 0 10px 0 0;
+  }
+}
+.ui-loading {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  @include border(border, 3px, #c7c7c7);
+  border-top-color: transparent;
+  border-radius: 100%;
+  animation: border-rotate 1s linear infinite;
+}
+@keyframes border-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

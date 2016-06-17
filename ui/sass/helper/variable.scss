@@ -1,0 +1,126 @@
+@import "../base/rem";
+
+//字体大小
+$font-size-base:26px;
+$font-size-info:32px;
+$font-size-sub:28px;
+
+$font-size-h1:44px;
+$font-size-h2:40px;
+$font-size-h3:36px;
+$font-size-h4:32px;
+$font-size-h5:28px;
+$font-size-h6:24px;
+
+//列表
+$active-bg:              #e5e6e7;
+$active-opacity:         .5;
+
+//图片
+$list-img-margin:         10px 10px 10px 0px;
+
+//颜色
+$color-default:           #000;
+$color-info:              #777;
+$color-muted:             #bbb;
+$color-warning:           #f89406;
+$color-highlight:         #ff8444;
+$color-link:              #00a5e0;
+$color-feeds:             #314c83;
+$color-success:           #468847;
+$color-important:         #f75549;
+
+//Web字体
+$icon-arrow:                            "\f600";
+$icon-checked:                          "\f601";
+$icon-checked-s:                        "\f602";
+$icon-info-block:                       "\f603";
+$icon-success-block:                    "\f604";
+$icon-warn-block:                       "\f605";
+$icon-info:                             "\f606";
+$icon-success:                          "\f607";
+$icon-warn:                             "\f608";
+$icon-warn-lg:                          "\f609";
+$icon-unchecked:                        "\f610";
+$icon-unchecked-s:                      "\f611";
+$icon-return:                           "\f614";
+$icon-close:                            "\f60a";
+$icon-close-page:                       "\f60b";
+$icon-search:                           "\f60c";
+$icon-tag:                              "\f60d";
+$icon-tag-s:                            "\f60e";
+$icon-tag-pop:                          "\f60f";
+
+//内边距
+$wrap-padding-xxl:30px;
+$wrap-padding-xl:25px;
+$wrap-padding-lg:20px;
+$wrap-padding:15px;
+$wrap-padding-sm:10px;
+$wrap-padding-xs:5px;
+
+$wrap-link-padding:30px;//有箭头的内边距
+$wrap-link-padding-sm:25px;
+
+// Z-Indexes
+$z-index-placeholder:                  -1;
+$z-index-img:                           1;
+$z-index-switch:                        2;
+$z-index-progress:                      9;
+$z-index-tag:                           9;
+$z-index-border:                        10;
+$z-index-notice:                        99;
+$z-index-tooltips:                      99;
+$z-index-head:                          100;
+$z-index-poptips:                       999;
+$z-index-overlay:                       9999;
+
+//布局
+$default-bg:            #fff;
+$positive-bg:           #18b4ed;
+$mask-bg:               rgba(0,0,0,.4);
+
+//边框
+$border-color:           #e0e0e0;
+$border-radius-base:    4px;
+$border-radius-lg:      8px;
+
+//按钮尺寸
+$button-width-sm:                       110px;
+$button-height-sm:                      50px;
+$button-size-sm:                        26px;
+
+$button-height:                         60px;
+$button-size:                           30px;
+$button-border-radius:                  6px;
+
+$button-height-lg:                      88px;
+$button-size-lg:                        36px;
+$button-border-radius-lg:               10px;
+
+$button-before-border-radius:           12px;
+$button-before-border-radius-lg:        20px;
+
+//按钮颜色
+$button-bg-color:                       #fdfdfd;
+$button-border-color:                   #cacccd;
+$button-active-bg:                      #f2f2f2;
+$button-active-text:                    rgba(0,165,224,.5);
+
+$button-primary-bg-color:               #18b4ed;
+$button-primary-active-bg:              #1ca7da;
+
+$button-danger-bg-color:                #f75549;
+$button-danger-active-bg:               #e2574d;
+
+$button-disabled-bg-color:              #e9ebec;
+
+$button-progress-bg-color:              #fefefe;
+$button-progress-text:                  #ccc;
+$button-progress-disabled-border-color: #cacccd;
+$button-progress-inner-bg-color:        #18b4ed;
+
+//表格
+$table-padding: 10px;
+$table-border-color: #ddd;
+

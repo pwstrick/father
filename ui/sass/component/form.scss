@@ -1,0 +1,61 @@
+@import "../helper/variable",
+"../helper/mixin";
+
+//表单项
+.ui-form-item {
+  position: relative;
+  font-size: $font-size-info;/*px*/
+  padding: $wrap-padding 0;
+  overflow: hidden;//防止箭头出现滚动条
+  & > label {
+    display: block;
+  }
+  label ~ .ui-control {
+    box-sizing: border-box;
+    position: relative;
+  }
+  input {
+    text-align: right;
+    line-height: 1.5;//让提示文字与label对齐
+  }
+  .tr {
+    text-align: right;
+  }
+  .tl {
+    text-align: left;
+  }
+  .tc {
+    text-align: center;
+  }
+  input, textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+  }
+  input[type="checkbox"],input[type="radio"]{
+    padding-left: 0;
+  }
+}
+
+//右边有按钮的情况
+.ui-form-item-btn {
+  button {
+    margin-left: 10px;
+    padding: 0;
+    border: 0;
+    color: #FFF;
+    background: $color-link;
+    display: block;
+  }
+}
+
+@mixin _form($name, $color) {
+  .ui-form-#{$name} {
+    label {
+      color: $color;
+    }
+  }
+}
+@include _form(error, $color-important);//错误表单
+@include _form(success, $color-success);//正确表单

@@ -1,0 +1,143 @@
+@import "../helper/variable", "../helper/mixin";
+
+/***********************************************************************************************************************
+* 基础样式
+************************************************************************************************************************/
+//active样式
+@mixin _btn-active() {
+  &:not(.disabled):not(:disabled):active,
+  &.active{
+    @content;
+  }
+}
+
+%btn {
+  position: relative;
+  text-align: center;
+  background: $button-bg-color;
+  color: rgb(0,165,224);
+  box-sizing: border-box;
+  vertical-align: top;
+  @include border(border, $button-border-color);
+  border-radius: $button-border-radius;
+  @include _btn-active {
+    background: $button-active-bg;
+    color: $button-active-text;
+  }
+  &.disabled,
+  &:disabled{
+    border: 0;
+    background: $button-disabled-bg-color;
+    color: #FFF;
+  }
+}
+
+.ui-btn,
+.ui-btn-lg,
+.ui-btn-sm {
+  @extend %btn;
+}
+
+/***********************************************************************************************************************
+* 尺寸与边距
+************************************************************************************************************************/
+//通用尺寸
+@mixin _btnSize($font, $height, $display:inline-block) {
+  font-size: $font;/*px*/
+  height: $height;
+  line-height: $height;
+  display: $display;
+}
+/**
+* 小按钮
+* 26px 110*50
+*/
+.ui-btn-sm{
+  @include _btnSize($button-size-sm, $button-height-sm);
+  width: $button-width-sm;
+}
+/**
+* 普通按钮
+* 30px 110*60
+*/
+.ui-btn{
+  @include _btnSize($button-size, $button-height);
+  min-width: $button-width-sm;
+  padding: 0 22px;
+}
+/**
+* 大按钮
+* 36px 100% * 88
+*/
+.ui-btn-lg {
+  @include _btnSize($button-size-lg, $button-height-lg, block);
+  width: 100%;
+  border-radius: $button-border-radius-lg;//10px
+}
+
+
+/***********************************************************************************************************************
+* 功能类型
+************************************************************************************************************************/
+%btn-white {
+  border:0;
+  color: #FFF;
+  @include _btn-active {
+    color: #FFF;
+  }
+}
+@mixin _btn($name, $bg, $active-bg) {
+  .ui-btn-#{$name} {
+    @extend %btn-white;
+    background: $bg;
+    @include _btn-active {
+      background: $active-bg;
+    }
+  }
+}
+/*蓝色*/
+@include _btn(primary, $button-primary-bg-color, $button-primary-active-bg);
+/*红色*/
+@include _btn(danger, $button-danger-bg-color, $button-danger-active-bg);
+
+/*进度条按钮*/
+.ui-btn-progress{
+  width: $button-width-sm;
+  padding: 0;
+  color: #FFF;
+  .ui-btn-inner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    background: $button-progress-inner-bg-color;
+    border-radius: $button-border-radius 0 0 $button-border-radius;
+    span{
+      display: inline-block;
+      position: absolute;
+      width: $button-width-sm;
+      left: 0;
+    }
+  }
+}
+
+//防止出现1px变粗的问题
+@include retina {
+  .ui-btn,
+  .ui-btn-lg,
+  .ui-btn-sm{
+    @include hairLine(border, $button-border-color);
+    &::before{
+      border-radius: $button-before-border-radius;
+    }
+    &.disabled::before,
+    &:disabled::before {
+      border: 0;
+    }
+  }
+  .ui-btn-primary::before,
+  .ui-btn-danger::before {
+    border: 0;
+  }
+}

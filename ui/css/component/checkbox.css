@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+/***********************************************************************************************************************
+* flex相关
+************************************************************************************************************************/
+
+/**
+* 工具会忽略-webkit-box-align属性
+*/
+
+/**
+* 上下左右居中
+*/
+
+/***********************************************************************************************************************
+* 文字相关
+************************************************************************************************************************/
+
+/**
+* 自动截取
+*/
+
+/**
+* Flex中自动截取
+*/
+
+/**
+* 自定义ICON
+*/
+
+/**
+* 列表中的小箭头
+*/
+
+/**
+* 列表中的小箭头 默认样式
+*/
+
+/***********************************************************************************************************************
+* CSS3属性兼容性
+************************************************************************************************************************/
+
+/**
+* Retina屏幕
+*/
+
+/***********************************************************************************************************************
+* border相关
+************************************************************************************************************************/
+
+/**
+* 1px兼容问题
+*/
+
+/***********************************************************************************************************************
+* 标签相关
+************************************************************************************************************************/
+
+.ui-checkbox {
+  display: inline-block;
+}
+
+.ui-checkbox-row {
+  display: block;
+  margin-right: 0;
+}
+
+.ui-checkbox input {
+  display: inline-block;
+  position: relative;
+  border: 0;
+  margin-right: 0.133333rem;
+  height: 0.013333rem;
+}
+
+.ui-checkbox input::after {
+  font-family: "iconfont" !important;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  content: "";
+  position: absolute;
+  left: 0;
+  color: #d5d5d5;
+}
+
+.ui-checkbox input:checked::after {
+  content: "";
+  color: #18b4ed;
+}
+
+.ui-checkbox {
+  margin-right: 0.133333rem;
+}
+
+.ui-checkbox-row {
+  margin-bottom: 0.266667rem;
+}
+
+[data-dpr="1"] .ui-checkbox input {
+  width: 32px;
+}
+
+[data-dpr="2"] .ui-checkbox input {
+  width: 64px;
+}
+
+[data-dpr="3"] .ui-checkbox input {
+  width: 96px;
+}
+
+[data-dpr="1"] .ui-checkbox input::after {
+  line-height: 16px;
+  font-size: 32px;
+  top: -14.4px;
+}
+
+[data-dpr="2"] .ui-checkbox input::after {
+  line-height: 32px;
+  font-size: 64px;
+  top: -28.8px;
+}
+
+[data-dpr="3"] .ui-checkbox input::after {
+  line-height: 48px;
+  font-size: 96px;
+  top: -43.2px;
+}

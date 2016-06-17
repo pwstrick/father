@@ -1,0 +1,50 @@
+@import "../helper/variable", "../helper/mixin";
+
+/***********************************************************************************************************************
+* 列表 li全部使用flex布局
+************************************************************************************************************************/
+.ui-list {
+  width: 100%;
+  & > li{
+    position:relative;
+    display: -webkit-box;//不能用兼容性的写法，不然用截断字符串会超出
+  }
+  /*按压效果*/
+  & > li.active {
+    background-color: $active-bg;
+  }
+}
+/*有些地方会使用flex，有些地方是block*/
+.ui-list-block > li{
+  display: block;
+}
+/*使用兼容性的flex写法*/
+.ui-list-flex > li{
+  display: flex;
+}
+/*列表上下间距*/
+.ui-list > li {
+  position: relative;
+  padding-top: 20px;//可再设置更大或更小的值
+  padding-bottom: 20px;
+}
+/*列表图片*/
+.ui-list-img{
+  @include img;
+  margin: $list-img-margin;
+}
+
+
+/***********************************************************************************************************************
+* 显示箭头的 li列表
+************************************************************************************************************************/
+.ui-list-link{
+  & > li {
+    overflow: hidden;/*箭头符号设置字体后after宽度会变大，right会导致滚动条*/
+    &::after {
+      @include arrowLinkDefault;
+    }
+    padding-right: $wrap-link-padding;//可做自定义配置
+  }
+}
+

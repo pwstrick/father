@@ -1,0 +1,139 @@
+/*
+  网格
+*/
+@import "../helper/mixin";
+.ui-flex {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  /*平均计算收缩，防止撑开*/
+  & > [class^="ui-width-"],
+  & > [class^="ui-rem-"]{
+    flex-basis: auto;//UC浏览器不支持
+    -webkit-flex-basis: auto;
+    flex-shrink: 1;//UC浏览器不支持
+    -webkit-flex-shrink: 1;
+    box-sizing: border-box;
+  }
+  /*行内元素使用弹性布局效果有问题，可先设置为块元素 col不能设置为块级*/
+  & > [class^="ui-width-db"],
+  & > [class^="ui-rem-db"] {
+    display: block;
+  }
+}
+.ui-flex-wrap {
+  flex-wrap: wrap;//Android端有兼容问题
+}
+
+/***********************************************************************************************************************
+* 属性设置
+************************************************************************************************************************/
+/* 水平排列 */
+.ui-flex-row {
+  flex-direction: row;
+}
+/* 纵向排列 */
+.ui-flex-column {
+  flex-direction: column;
+}
+
+/* 多行垂直居中 */
+.ui-flex-columns-center {
+  @include alignContent();
+}
+
+/* 单行垂直居中 */
+.ui-flex-column-center {
+  align-items:center;
+}
+/* 单行基线对齐 */
+.ui-flex-column-baseline {
+  align-items:baseline;
+}
+/* 单行侧轴对齐 */
+.ui-flex-column-end {
+  align-items: flex-end;
+}
+
+/* 向行中间位置对齐，受排列方向影响 */
+.ui-flex-row-center {
+  justify-content: center;
+}
+/* 向行两边位置对齐，受排列方向影响 */
+.ui-flex-row-between {
+  justify-content: space-between;
+}
+
+/***********************************************************************************************************************
+* 空间设置
+************************************************************************************************************************/
+@for $col from 1 through 12 {
+  .ui-col-#{$col} {
+    @include flex($col);
+  }
+}
+
+/***********************************************************************************************************************
+* rem宽度
+************************************************************************************************************************/
+//$column_num : 24;//24列
+//@for $row from 0 through $column_num {
+//  $width: 31.5px * $row;
+//  //宽度
+//  .ui-rem-#{$row}, .ui-rem-db-#{$row}{
+//    width: $width;
+//  };
+//  //偏移量
+//  .ui-offset-rem-#{$row}{
+//    margin-left: $width;
+//  };
+//  //右边距离
+//  .ui-pull-rem-#{$row}{
+//    right: $width;
+//  };
+//  //左边距离
+//  .ui-push-rem-#{$row}{
+//    left: $width;
+//  };
+//}
+
+/***********************************************************************************************************************
+* 百分比宽度
+************************************************************************************************************************/
+$column_num : 24;//24列
+@for $row from 0 through $column_num {
+    $width: percentage($row / $column_num);
+    //宽度
+    .ui-width-#{$row}, .ui-width-db-#{$row}{
+      width: $width;
+    };
+    //偏移量
+    .ui-offset-#{$row}{
+      margin-left: $width;
+    };
+    //右边距离
+    .ui-pull-#{$row}{
+      right: $width;
+    };
+    //左边距离
+    .ui-push-#{$row}{
+      left: $width;
+    };
+}
+
+/***********************************************************************************************************************
+* float流布局
+************************************************************************************************************************/
+.ui-fluid {
+  width: 100%;
+  &::after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+  }
+  & > [class^="ui-width-"] {
+    float: left;
+    box-sizing: border-box;
+  }
+}

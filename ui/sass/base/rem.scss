@@ -1,0 +1,34 @@
+//计算rem的函数
+@function funcPxToRem($px-values, $baseline-px:64px){
+  $baseline-rem: $baseline-px / 1rem * 1;//convert the baseline into rems
+
+  //if there is only one (numeric) value, return the property/value line for it.
+  @if type-of($px-values) == "number"{
+    @return $px-values / $baseline-rem;
+  }
+  @else {
+    $rem-values:();
+    @each $value in $px-values{
+      @if $value == 0 {
+        $value : 0px;//加px 不然会报isn't a valid CSS value错误
+      }
+      @if type-of($value) == "number"{
+        $rem-values: append($rem-values, $value / $baseline-rem);
+      }
+    }
+    @return $rem-values;
+  }
+}
+
+//输出单个属性
+@mixin px2rem($property, $px-values, $baseline-px:64px) {
+  #{$property}: funcPxToRem($px-values, $baseline-px);
+}
+
+//数组形式输出多个属性
+@mixin px2rems($params) {
+  @each $property, $value in $params {
+    @include px2rem($property, $value);
+  }
+}
+

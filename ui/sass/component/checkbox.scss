@@ -1,0 +1,48 @@
+@import "../helper/variable",
+"../helper/mixin";
+//列
+.ui-checkbox{
+  display: inline-block;
+}
+//行
+.ui-checkbox-row {
+  display: block;
+  margin-right: 0;
+}
+.ui-checkbox input{
+  display: inline-block;
+  position: relative;
+  border: 0;
+  margin-right: 10px;
+  height: 1px;//不赋值的话 IOS和Android不能一起对齐
+}
+.ui-checkbox input::after{
+  @include icon;
+  content: $icon-unchecked;
+  position: absolute;
+  left: 0;
+  color: lighten($color-muted, 10%);
+}
+.ui-checkbox input:checked::after{
+  content: $icon-checked;
+  color: $positive-bg;
+}
+
+@mixin _checkbox($font-size, $margin-right, $margin-bottom) {
+  .ui-checkbox {
+    margin-right: $margin-right;
+  }
+  .ui-checkbox-row {
+    margin-bottom: $margin-bottom;
+  }
+  .ui-checkbox input{
+    width: $font-size * 2;/*px*/
+  }
+  .ui-checkbox input::after {
+    line-height: $font-size;/*px*/
+    font-size: $font-size * 2;/*px*/
+    top: -$font-size * 0.9;/*px*/
+  }
+}
+//三个参数可以根据情况做修改
+@include _checkbox(32px, $wrap-padding-sm, $wrap-padding-lg);

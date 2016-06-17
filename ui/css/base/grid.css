@@ -1,0 +1,716 @@
+@charset "UTF-8";
+
+/*
+  网格
+*/
+
+/***********************************************************************************************************************
+* flex相关
+************************************************************************************************************************/
+
+/**
+* 工具会忽略-webkit-box-align属性
+*/
+
+/**
+* 上下左右居中
+*/
+
+/***********************************************************************************************************************
+* 文字相关
+************************************************************************************************************************/
+
+/**
+* 自动截取
+*/
+
+/**
+* Flex中自动截取
+*/
+
+/**
+* 自定义ICON
+*/
+
+/**
+* 列表中的小箭头
+*/
+
+/**
+* 列表中的小箭头 默认样式
+*/
+
+/***********************************************************************************************************************
+* CSS3属性兼容性
+************************************************************************************************************************/
+
+/**
+* Retina屏幕
+*/
+
+/***********************************************************************************************************************
+* border相关
+************************************************************************************************************************/
+
+/**
+* 1px兼容问题
+*/
+
+/***********************************************************************************************************************
+* 标签相关
+************************************************************************************************************************/
+
+.ui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  /*平均计算收缩，防止撑开*/
+  /*行内元素使用弹性布局效果有问题，可先设置为块元素 col不能设置为块级*/
+}
+
+.ui-flex > [class^="ui-width-"],
+.ui-flex > [class^="ui-rem-"] {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-flex-shrink: 1;
+  box-sizing: border-box;
+}
+
+.ui-flex > [class^="ui-width-db"],
+.ui-flex > [class^="ui-rem-db"] {
+  display: block;
+}
+
+.ui-flex-wrap {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+/***********************************************************************************************************************
+* 属性设置
+************************************************************************************************************************/
+
+/* 水平排列 */
+
+.ui-flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+/* 纵向排列 */
+
+.ui-flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* 多行垂直居中 */
+
+.ui-flex-columns-center {
+  -webkit-box-align: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+/* 单行垂直居中 */
+
+.ui-flex-column-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+}
+
+/* 单行基线对齐 */
+
+.ui-flex-column-baseline {
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+              -ms-grid-row-align: baseline;
+          align-items: baseline;
+}
+
+/* 单行侧轴对齐 */
+
+.ui-flex-column-end {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+              -ms-grid-row-align: flex-end;
+          align-items: flex-end;
+}
+
+/* 向行中间位置对齐，受排列方向影响 */
+
+.ui-flex-row-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* 向行两边位置对齐，受排列方向影响 */
+
+.ui-flex-row-between {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/***********************************************************************************************************************
+* 空间设置
+************************************************************************************************************************/
+
+.ui-col-1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
+}
+
+.ui-col-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2 0 0;
+  -ms-flex: 2 0 0;
+  flex: 2 0 0;
+}
+
+.ui-col-3 {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3 0 0;
+  -ms-flex: 3 0 0;
+  flex: 3 0 0;
+}
+
+.ui-col-4 {
+  -webkit-box-flex: 4;
+  -webkit-flex: 4 0 0;
+  -ms-flex: 4 0 0;
+  flex: 4 0 0;
+}
+
+.ui-col-5 {
+  -webkit-box-flex: 5;
+  -webkit-flex: 5 0 0;
+  -ms-flex: 5 0 0;
+  flex: 5 0 0;
+}
+
+.ui-col-6 {
+  -webkit-box-flex: 6;
+  -webkit-flex: 6 0 0;
+  -ms-flex: 6 0 0;
+  flex: 6 0 0;
+}
+
+.ui-col-7 {
+  -webkit-box-flex: 7;
+  -webkit-flex: 7 0 0;
+  -ms-flex: 7 0 0;
+  flex: 7 0 0;
+}
+
+.ui-col-8 {
+  -webkit-box-flex: 8;
+  -webkit-flex: 8 0 0;
+  -ms-flex: 8 0 0;
+  flex: 8 0 0;
+}
+
+.ui-col-9 {
+  -webkit-box-flex: 9;
+  -webkit-flex: 9 0 0;
+  -ms-flex: 9 0 0;
+  flex: 9 0 0;
+}
+
+.ui-col-10 {
+  -webkit-box-flex: 10;
+  -webkit-flex: 10 0 0;
+  -ms-flex: 10 0 0;
+  flex: 10 0 0;
+}
+
+.ui-col-11 {
+  -webkit-box-flex: 11;
+  -webkit-flex: 11 0 0;
+  -ms-flex: 11 0 0;
+  flex: 11 0 0;
+}
+
+.ui-col-12 {
+  -webkit-box-flex: 12;
+  -webkit-flex: 12 0 0;
+  -ms-flex: 12 0 0;
+  flex: 12 0 0;
+}
+
+/***********************************************************************************************************************
+* rem宽度
+************************************************************************************************************************/
+
+/***********************************************************************************************************************
+* 百分比宽度
+************************************************************************************************************************/
+
+.ui-width-0,
+.ui-width-db-0 {
+  width: 0%;
+}
+
+.ui-offset-0 {
+  margin-left: 0%;
+}
+
+.ui-pull-0 {
+  right: 0%;
+}
+
+.ui-push-0 {
+  left: 0%;
+}
+
+.ui-width-1,
+.ui-width-db-1 {
+  width: 4.16667%;
+}
+
+.ui-offset-1 {
+  margin-left: 4.16667%;
+}
+
+.ui-pull-1 {
+  right: 4.16667%;
+}
+
+.ui-push-1 {
+  left: 4.16667%;
+}
+
+.ui-width-2,
+.ui-width-db-2 {
+  width: 8.33333%;
+}
+
+.ui-offset-2 {
+  margin-left: 8.33333%;
+}
+
+.ui-pull-2 {
+  right: 8.33333%;
+}
+
+.ui-push-2 {
+  left: 8.33333%;
+}
+
+.ui-width-3,
+.ui-width-db-3 {
+  width: 12.5%;
+}
+
+.ui-offset-3 {
+  margin-left: 12.5%;
+}
+
+.ui-pull-3 {
+  right: 12.5%;
+}
+
+.ui-push-3 {
+  left: 12.5%;
+}
+
+.ui-width-4,
+.ui-width-db-4 {
+  width: 16.66667%;
+}
+
+.ui-offset-4 {
+  margin-left: 16.66667%;
+}
+
+.ui-pull-4 {
+  right: 16.66667%;
+}
+
+.ui-push-4 {
+  left: 16.66667%;
+}
+
+.ui-width-5,
+.ui-width-db-5 {
+  width: 20.83333%;
+}
+
+.ui-offset-5 {
+  margin-left: 20.83333%;
+}
+
+.ui-pull-5 {
+  right: 20.83333%;
+}
+
+.ui-push-5 {
+  left: 20.83333%;
+}
+
+.ui-width-6,
+.ui-width-db-6 {
+  width: 25%;
+}
+
+.ui-offset-6 {
+  margin-left: 25%;
+}
+
+.ui-pull-6 {
+  right: 25%;
+}
+
+.ui-push-6 {
+  left: 25%;
+}
+
+.ui-width-7,
+.ui-width-db-7 {
+  width: 29.16667%;
+}
+
+.ui-offset-7 {
+  margin-left: 29.16667%;
+}
+
+.ui-pull-7 {
+  right: 29.16667%;
+}
+
+.ui-push-7 {
+  left: 29.16667%;
+}
+
+.ui-width-8,
+.ui-width-db-8 {
+  width: 33.33333%;
+}
+
+.ui-offset-8 {
+  margin-left: 33.33333%;
+}
+
+.ui-pull-8 {
+  right: 33.33333%;
+}
+
+.ui-push-8 {
+  left: 33.33333%;
+}
+
+.ui-width-9,
+.ui-width-db-9 {
+  width: 37.5%;
+}
+
+.ui-offset-9 {
+  margin-left: 37.5%;
+}
+
+.ui-pull-9 {
+  right: 37.5%;
+}
+
+.ui-push-9 {
+  left: 37.5%;
+}
+
+.ui-width-10,
+.ui-width-db-10 {
+  width: 41.66667%;
+}
+
+.ui-offset-10 {
+  margin-left: 41.66667%;
+}
+
+.ui-pull-10 {
+  right: 41.66667%;
+}
+
+.ui-push-10 {
+  left: 41.66667%;
+}
+
+.ui-width-11,
+.ui-width-db-11 {
+  width: 45.83333%;
+}
+
+.ui-offset-11 {
+  margin-left: 45.83333%;
+}
+
+.ui-pull-11 {
+  right: 45.83333%;
+}
+
+.ui-push-11 {
+  left: 45.83333%;
+}
+
+.ui-width-12,
+.ui-width-db-12 {
+  width: 50%;
+}
+
+.ui-offset-12 {
+  margin-left: 50%;
+}
+
+.ui-pull-12 {
+  right: 50%;
+}
+
+.ui-push-12 {
+  left: 50%;
+}
+
+.ui-width-13,
+.ui-width-db-13 {
+  width: 54.16667%;
+}
+
+.ui-offset-13 {
+  margin-left: 54.16667%;
+}
+
+.ui-pull-13 {
+  right: 54.16667%;
+}
+
+.ui-push-13 {
+  left: 54.16667%;
+}
+
+.ui-width-14,
+.ui-width-db-14 {
+  width: 58.33333%;
+}
+
+.ui-offset-14 {
+  margin-left: 58.33333%;
+}
+
+.ui-pull-14 {
+  right: 58.33333%;
+}
+
+.ui-push-14 {
+  left: 58.33333%;
+}
+
+.ui-width-15,
+.ui-width-db-15 {
+  width: 62.5%;
+}
+
+.ui-offset-15 {
+  margin-left: 62.5%;
+}
+
+.ui-pull-15 {
+  right: 62.5%;
+}
+
+.ui-push-15 {
+  left: 62.5%;
+}
+
+.ui-width-16,
+.ui-width-db-16 {
+  width: 66.66667%;
+}
+
+.ui-offset-16 {
+  margin-left: 66.66667%;
+}
+
+.ui-pull-16 {
+  right: 66.66667%;
+}
+
+.ui-push-16 {
+  left: 66.66667%;
+}
+
+.ui-width-17,
+.ui-width-db-17 {
+  width: 70.83333%;
+}
+
+.ui-offset-17 {
+  margin-left: 70.83333%;
+}
+
+.ui-pull-17 {
+  right: 70.83333%;
+}
+
+.ui-push-17 {
+  left: 70.83333%;
+}
+
+.ui-width-18,
+.ui-width-db-18 {
+  width: 75%;
+}
+
+.ui-offset-18 {
+  margin-left: 75%;
+}
+
+.ui-pull-18 {
+  right: 75%;
+}
+
+.ui-push-18 {
+  left: 75%;
+}
+
+.ui-width-19,
+.ui-width-db-19 {
+  width: 79.16667%;
+}
+
+.ui-offset-19 {
+  margin-left: 79.16667%;
+}
+
+.ui-pull-19 {
+  right: 79.16667%;
+}
+
+.ui-push-19 {
+  left: 79.16667%;
+}
+
+.ui-width-20,
+.ui-width-db-20 {
+  width: 83.33333%;
+}
+
+.ui-offset-20 {
+  margin-left: 83.33333%;
+}
+
+.ui-pull-20 {
+  right: 83.33333%;
+}
+
+.ui-push-20 {
+  left: 83.33333%;
+}
+
+.ui-width-21,
+.ui-width-db-21 {
+  width: 87.5%;
+}
+
+.ui-offset-21 {
+  margin-left: 87.5%;
+}
+
+.ui-pull-21 {
+  right: 87.5%;
+}
+
+.ui-push-21 {
+  left: 87.5%;
+}
+
+.ui-width-22,
+.ui-width-db-22 {
+  width: 91.66667%;
+}
+
+.ui-offset-22 {
+  margin-left: 91.66667%;
+}
+
+.ui-pull-22 {
+  right: 91.66667%;
+}
+
+.ui-push-22 {
+  left: 91.66667%;
+}
+
+.ui-width-23,
+.ui-width-db-23 {
+  width: 95.83333%;
+}
+
+.ui-offset-23 {
+  margin-left: 95.83333%;
+}
+
+.ui-pull-23 {
+  right: 95.83333%;
+}
+
+.ui-push-23 {
+  left: 95.83333%;
+}
+
+.ui-width-24,
+.ui-width-db-24 {
+  width: 100%;
+}
+
+.ui-offset-24 {
+  margin-left: 100%;
+}
+
+.ui-pull-24 {
+  right: 100%;
+}
+
+.ui-push-24 {
+  left: 100%;
+}
+
+/***********************************************************************************************************************
+* float流布局
+************************************************************************************************************************/
+
+.ui-fluid {
+  width: 100%;
+}
+
+.ui-fluid::after {
+  display: table;
+  line-height: 0;
+  content: "";
+  clear: both;
+}
+
+.ui-fluid > [class^="ui-width-"] {
+  float: left;
+  box-sizing: border-box;
+}

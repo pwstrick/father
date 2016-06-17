@@ -1,0 +1,62 @@
+@import "../helper/variable",
+"../helper/mixin";
+//列
+.ui-radio {
+  display: inline-block;
+}
+//行
+.ui-radio-row {
+  display: block;
+  margin-right: 0;
+}
+.ui-radio input{
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+.ui-radio input::before{
+  content:'';
+  border: 1px solid lighten($color-muted, 10%);/*no*/
+  border-radius: 100%;
+  background-clip: padding-box;
+  position: absolute;
+  left:0;
+  top: 0;
+}
+.ui-radio input:checked::after{
+  content:'';
+  background: $positive-bg;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+//画图形样式
+@mixin _radio($width, $margin-right, $margin-bottom) {
+  $radio: $width;
+  $radio-outer: $width - 4;
+  $radio-inner: $width - 24;
+  .ui-radio {
+    margin-right: $margin-right;
+  }
+  .ui-radio-row {
+    margin-bottom: $margin-bottom;
+  }
+  .ui-radio input{
+    width: $radio;/*px*/
+    height: $radio;/*px*/
+    vertical-align: -$radio / 4;/*px*/
+  }
+  .ui-radio input::before{
+    width: $radio-outer;/*px*/
+    height: $radio-outer;/*px*/
+  }
+  .ui-radio input:checked::after{
+    width: $radio-inner;/*px*/
+    height: $radio-inner;/*px*/
+    margin-top: -$radio-inner / 2;/*px*/
+    margin-left: -$radio-inner / 2;/*px*/
+  }
+}
+//三个参数可以根据情况做修改
+@include _radio(52px, $wrap-padding-sm, $wrap-padding-lg);

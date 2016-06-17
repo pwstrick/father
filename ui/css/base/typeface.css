@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+/*
+  字体效果
+*/
+
+/***********************************************************************************************************************
+* flex相关
+************************************************************************************************************************/
+
+/**
+* 工具会忽略-webkit-box-align属性
+*/
+
+/**
+* 上下左右居中
+*/
+
+/***********************************************************************************************************************
+* 文字相关
+************************************************************************************************************************/
+
+/**
+* 自动截取
+*/
+
+/**
+* Flex中自动截取
+*/
+
+/**
+* 自定义ICON
+*/
+
+/**
+* 列表中的小箭头
+*/
+
+/**
+* 列表中的小箭头 默认样式
+*/
+
+/***********************************************************************************************************************
+* CSS3属性兼容性
+************************************************************************************************************************/
+
+/**
+* Retina屏幕
+*/
+
+/***********************************************************************************************************************
+* border相关
+************************************************************************************************************************/
+
+/**
+* 1px兼容问题
+*/
+
+/***********************************************************************************************************************
+* 标签相关
+************************************************************************************************************************/
+
+/***********************************************************************************************************************
+* h1 h2 h3 h4 h5 h6
+************************************************************************************************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: inherit;
+  font-weight: 500;
+  color: inherit;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small {
+  font-weight: normal;
+  line-height: 1;
+  color: #777;
+}
+
+h1 small,
+.h1 small,
+h2 small,
+.h2 small,
+h3 small,
+.h3 small,
+h1 .small,
+.h1 .small,
+h2 .small,
+.h2 .small,
+h3 .small,
+.h3 .small {
+  font-size: 65%;
+}
+
+h4 small,
+.h4 small,
+h5 small,
+.h5 small,
+h6 small,
+.h6 small,
+h4 .small,
+.h4 .small,
+h5 .small,
+.h5 .small,
+h6 .small,
+.h6 .small {
+  font-size: 75%;
+}
+
+[data-dpr="1"] h1,
+[data-dpr="1"] .h1 {
+  font-size: 22px;
+}
+
+[data-dpr="2"] h1,
+[data-dpr="2"] .h1 {
+  font-size: 44px;
+}
+
+[data-dpr="3"] h1,
+[data-dpr="3"] .h1 {
+  font-size: 66px;
+}
+
+[data-dpr="1"] h2,
+[data-dpr="1"] .h2 {
+  font-size: 20px;
+}
+
+[data-dpr="2"] h2,
+[data-dpr="2"] .h2 {
+  font-size: 40px;
+}
+
+[data-dpr="3"] h2,
+[data-dpr="3"] .h2 {
+  font-size: 60px;
+}
+
+[data-dpr="1"] h3,
+[data-dpr="1"] .h3 {
+  font-size: 18px;
+}
+
+[data-dpr="2"] h3,
+[data-dpr="2"] .h3 {
+  font-size: 36px;
+}
+
+[data-dpr="3"] h3,
+[data-dpr="3"] .h3 {
+  font-size: 54px;
+}
+
+[data-dpr="1"] h4,
+[data-dpr="1"] .h4 {
+  font-size: 16px;
+}
+
+[data-dpr="2"] h4,
+[data-dpr="2"] .h4 {
+  font-size: 32px;
+}
+
+[data-dpr="3"] h4,
+[data-dpr="3"] .h4 {
+  font-size: 48px;
+}
+
+[data-dpr="1"] h5,
+[data-dpr="1"] .h5 {
+  font-size: 14px;
+}
+
+[data-dpr="2"] h5,
+[data-dpr="2"] .h5 {
+  font-size: 28px;
+}
+
+[data-dpr="3"] h5,
+[data-dpr="3"] .h5 {
+  font-size: 42px;
+}
+
+[data-dpr="1"] h6,
+[data-dpr="1"] .h6 {
+  font-size: 12px;
+}
+
+[data-dpr="2"] h6,
+[data-dpr="2"] .h6 {
+  font-size: 24px;
+}
+
+[data-dpr="3"] h6,
+[data-dpr="3"] .h6 {
+  font-size: 36px;
+}
+
+/***********************************************************************************************************************
+* 字体大小
+************************************************************************************************************************/
+
+/***********************************************************************************************************************
+* 颜色
+************************************************************************************************************************/
+
+.ui-color-default {
+  color: #000;
+}
+
+.ui-color-white {
+  color: white;
+}
+
+.ui-color-info {
+  color: #777;
+}
+
+.ui-color-muted {
+  color: #bbb;
+}
+
+.ui-color-warning {
+  color: #f89406;
+}
+
+.ui-color-feeds {
+  color: #314c83;
+}
+
+.ui-color-highlight {
+  color: #ff8444;
+}
+
+.ui-color-important {
+  color: #f75549;
+}
+
+.ui-color-success {
+  color: #468847;
+}
+
+a {
+  color: #00a5e0;
+}
+
+em {
+  color: #ff8444;
+}
+
+/***********************************************************************************************************************
+* Input中的placeholder
+************************************************************************************************************************/
+
+input::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: #777;
+}
+
+/***********************************************************************************************************************
+* 文字截断
+************************************************************************************************************************/
+
+/* 普通单行 */
+
+.ui-nowrap {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 弹性布局单行 */
+
+.ui-nowrap-flex {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 弹性布局两行 */
+
+.ui-nowrap-flex-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/***********************************************************************************************************************
+* 箭头链接
+************************************************************************************************************************/
+
+.ui-arrow-link {
+  position: relative;
+}
+
+.ui-arrow-link::after {
+  font-family: "iconfont" !important;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  font-weight: bold;
+  color: #c7c7c7;
+  content: "";
+  position: absolute;
+  right: -0.106667rem;
+  top: 50%;
+}
+
+[data-dpr="1"] .ui-arrow-link::after {
+  font-size: 26px;
+  margin-top: -18.2px;
+}
+
+[data-dpr="2"] .ui-arrow-link::after {
+  font-size: 52px;
+  margin-top: -36.4px;
+}
+
+[data-dpr="3"] .ui-arrow-link::after {
+  font-size: 78px;
+  margin-top: -54.6px;
+}

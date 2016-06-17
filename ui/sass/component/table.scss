@@ -1,0 +1,104 @@
+@import "../helper/variable";
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,th {
+  padding: 0;
+  word-wrap: break-word;
+  word-break:break-all;
+}
+caption {
+  padding-top: $table-padding;
+  padding-bottom: $table-padding;
+  color: $color-info;
+  text-align: left;
+}
+/*向左*/
+table th.tl,
+table td.tl,
+table caption.tl{
+  text-align: left;
+}
+/*向右*/
+table th.tr,
+table td.tr,
+table caption.tr{
+  text-align: right;
+}
+/*居中*/
+table th.tc,
+table td.tc,
+table caption.tc{
+  text-align: center;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: $table-padding;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid $table-border-color;/*no*/
+}
+.table > thead > tr > th {
+  vertical-align:bottom;
+  border-bottom:2px solid $table-border-color;/*no*/
+}
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+.table > tbody + tbody {
+  border-top: 2px solid $table-border-color;/*no*/
+}
+.table .table {
+  background-color: $default-bg;
+}
+
+/* 带边框表格 */
+.table-bordered {
+  border: 1px solid $table-border-color;/*no*/
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid $table-border-color;/*no*/
+}
+
+@mixin _tableColor($name, $color) {
+  .table > thead > tr > td.#{$name},
+  .table > tbody > tr > td.#{$name},
+  .table > tfoot > tr > td.#{$name},
+  .table > thead > tr > th.#{$name},
+  .table > tbody > tr > th.#{$name},
+  .table > tfoot > tr > th.#{$name},
+  .table > thead > tr.#{$name} > td,
+  .table > tbody > tr.#{$name} > td,
+  .table > tfoot > tr.#{$name} > td,
+  .table > thead > tr.#{$name} > th,
+  .table > tbody > tr.#{$name} > th,
+  .table > tfoot > tr.#{$name} > th {
+    background-color: $color;
+  }
+}
+@include _tableColor(success, lighten($color-success,50%));
+@include _tableColor(info, lighten($color-feeds,50%));
+@include _tableColor(important, lighten($color-important,30%));
+@include _tableColor(warning, lighten($color-warning, 40%));
+

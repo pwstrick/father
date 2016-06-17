@@ -1,0 +1,98 @@
+@import "../helper/mixin";
+
+%ui-switch {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ui-switch{
+  display: inline-block;
+}
+.ui-switch input {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  //width: 52px;/*no*/
+  //height: 32px;/*no*/
+  //border-radius: 16px ;/*no*/
+  border: 1px solid #d5d5d5;/*no*/
+  transition: border .4s;
+  &::after, &::before{
+    @extend %ui-switch;
+  }
+  //画圆
+  &::after {
+    border-radius: 100%;
+    //width: 30px;/*no*/
+    //height: 30px;/*no*/
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.4);/*no*/
+
+  }
+  //画框
+  &::before {
+    //width: 50px;/*no*/
+    //height: 30px;/*no*/
+    //border-radius: 14px;/*no*/
+    background: #fff;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    transition: border .4s,box-shadow .4s;
+  }
+  //选中效果
+  &:checked {
+    border-color: #18affe;
+    //&::after {
+    //  left: 20px;/*no*/
+    //}
+    &::before {
+      box-shadow: #18affe 0 0 0 16px inset;/*no*/
+      background-color: #18affe;
+      transition: border .4s,box-shadow .4s,background-color 1.2s;
+    }
+  }
+}
+
+@mixin _switch($width, $height) {
+  .ui-switch input {
+    width: $width;/*no*/
+    height: $height;/*no*/
+    border-radius: $height / 2;/*no*/
+    //画圆
+    &::after {
+      width: $height - 2;/*no*/
+      height: $height - 2;/*no*/
+    }
+    //画框
+    &::before {
+      width: $width - 2;/*no*/
+      height: $height - 2;/*no*/
+      border-radius: ($height - 2) / 2;/*no*/
+    }
+    //选中效果
+    &:checked {
+      &::after {
+        left: $width - 2 - ($height - 2);/*no*/
+      }
+    }
+  }
+}
+
+// 圆的高度相对于input是减去2
+// 圆的CSS中 [data-dpr="2"]的height是62 而在[data-dpr="1"]的height是31，但其实应该是30，因为input的height是32
+// 由于自动计算仅仅是各个属性除以2，所以只能分情况设置
+@mixin _switchDpr($width, $height) {
+  $width-half: $width / 2;
+  $height-half: $height / 2;
+  [data-dpr="1"] {
+    @include _switch($width-half, $height-half);
+  }
+  [data-dpr="2"] {
+    @include _switch($width, $height);
+  }
+  [data-dpr="3"] {
+    @include _switch($width + $width-half, $height + $height-half);
+  }
+}
+
+@include _switchDpr(104px, 64px);

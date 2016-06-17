@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/core/flexible.js"></script>
+    <title>form</title>
+    <link href="css/all.css" rel="stylesheet"/>
+    <link href="css/demo.css" rel="stylesheet"/>
+</head>
+<body>
+    <section class="demo-block">
+        <h4 class="demo-title">表单展示</h4>
+        <form action="#" class="ui-form">
+            <ul class="ui-whitespace-sm-lr">
+                <li class="ui-flex ui-form-item ui-border-b">
+                    <label>展示项</label>
+                    <section class="ui-control ui-col-1">
+                        <p class="tr">display item</p>
+                    </section>
+                </li>
+                <li class="ui-flex ui-form-item ui-border-b ui-flex-column-center">
+                    <label>输入框</label>
+                    <section class="ui-control ui-col-1">
+                        <input type="text" placeholder="normal condition" />
+                    </section>
+                </li>
+                <li class="ui-flex ui-form-item ui-border-b ui-flex-column-center ui-form-error">
+                    <label>错误框</label>
+                    <section class="ui-control ui-col-1">
+                        <input type="text" placeholder="error condition" />
+                    </section>
+                </li>
+                <li class="ui-flex ui-form-item ui-border-b ui-flex-column-center ui-form-success">
+                    <label>正确框</label>
+                    <section class="ui-control ui-col-1">
+                        <input type="text" placeholder="right situation" />
+                    </section>
+                </li>
+                <li class="ui-flex ui-form-item ui-border-b">
+                    <label>多行文本框</label>
+                    <section class="ui-control ui-col-1">
+                        <textarea placeholder="multiple line text box" rows="2" cols="10" class="tr"></textarea>
+                    </section>
+                </li>
+                <li class="ui-flex ui-form-item ui-form-item-btn ui-border-b">
+                    <label>加按钮</label>
+                    <section class="ui-control ui-col-1 ui-flex ui-flex-row-between">
+                        <input type="text" placeholder="请输入手机号码" />
+                        <button type="button" class="ui-width-8">send</button>
+                    </section>
+                </li>
+                <li class="ui-flex ui-form-item">
+                    <label>单选框</label>
+                    <section class="ui-control ui-col-1 tr">
+                        <label class="ui-radio">
+                            <input type="radio" name="radio1"><span>男</span>
+                        </label>
+                        <label class="ui-radio">
+                            <input type="radio" name="radio1"><span>女</span>
+                        </label>
+                    </section>
+                </li>
+                <li class="ui-flex ui-form-item">
+                    <label>单选框</label>
+                    <section class="ui-control ui-col-1 tr">
+                        <label class="ui-radio ui-radio-row">
+                            <input type="radio" name="radio2"><span>男</span>
+                        </label>
+                        <label class="ui-radio ui-radio-row">
+                            <input type="radio" name="radio2"><span>女</span>
+                        </label>
+                    </section>
+                </li>
+                <li class="ui-flex ui-form-item">
+                    <label>多选框</label>
+                    <section class="ui-control ui-col-1 tr">
+                        <label class="ui-checkbox">
+                            <input type="checkbox" name="checkbox1"><span>多选框一</span>
+                        </label>
+                        <label class="ui-checkbox">
+                            <input type="checkbox" name="checkbox1"><span>多选框二</span>
+                        </label>
+                    </section>
+                </li>
+                <li class="ui-flex ui-form-item">
+                    <label>多选框</label>
+                    <section class="ui-control ui-col-1 tr">
+                        <label class="ui-checkbox ui-checkbox-row">
+                            <input type="checkbox" name="checkbox2"><span>多选框一</span>
+                        </label>
+                        <label class="ui-checkbox ui-checkbox-row">
+                            <input type="checkbox" name="checkbox2"><span>多选框二</span>
+                        </label>
+                    </section>
+                </li>
+                <li class="ui-flex ui-form-item">
+                    <label>开关项</label>
+                    <section class="ui-control ui-col-1 tr">
+                        <label class="ui-switch">
+                            <input type="checkbox"/>
+                        </label>
+                    </section>
+                </li>
+            </ul>
+        </form>
+    </section>
+</body>
+</html>

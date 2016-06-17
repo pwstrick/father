@@ -1,0 +1,151 @@
+@import "variable";
+
+/***********************************************************************************************************************
+* flex相关
+************************************************************************************************************************/
+@mixin flex($grow, $shrink:0, $basis:0) {
+  -webkit-box-flex:$grow;
+  -webkit-flex:$grow $shrink $basis;
+  -ms-flex:$grow $shrink $basis;
+  flex:$grow $shrink $basis;
+}
+/**
+* 工具会忽略-webkit-box-align属性
+*/
+@mixin alignContent($flex:center, $box:center) {
+  -webkit-box-align:$box;  -webkit-align-content: $flex;  align-content:$flex;
+}
+/**
+* 上下左右居中
+*/
+@mixin flexCenter($direction:column) {
+  display: flex;
+  @if $direction == row {
+    flex-direction: row;
+  }
+  @else {
+    flex-direction: column;
+  }
+  justify-content: center;
+  align-items: center;
+}
+
+
+/***********************************************************************************************************************
+* 文字相关
+************************************************************************************************************************/
+/**
+* 自动截取
+*/
+@mixin nowrap{
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;//强制在同一行内显示所有文本
+  text-overflow: ellipsis;
+}
+/**
+* Flex中自动截取
+*/
+@mixin nowrapFlex($rowNum){
+  display: -webkit-box;//与-webkit-line-clamp配合
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $rowNum;//限制在一个块元素显示的文本的行数 必须结合的属性display:-webkit-box与-webkit-box-orient
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/**
+* 自定义ICON
+*/
+@mixin icon{
+  font-family: "iconfont" !important;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+/**
+* 列表中的小箭头
+*/
+@mixin arrowLink($font-size, $margin-top, $right:-8px){
+  @include icon;
+  font-size: $font-size;/*px*/
+  font-weight:bold;
+  color: #c7c7c7;
+  content: $icon-arrow;
+  position: absolute;
+  right: $right;
+  top: 50%;
+  margin-top: $margin-top;/*px*/
+}
+/**
+* 列表中的小箭头 默认样式
+*/
+@mixin arrowLinkDefault{
+  //经过计算得出 after高度减去字体大小是四的倍数 after高度 = 字体大小/10 * 4 + 字体大小
+  @include arrowLink($font-size-base * 2, -($font-size-base/10 * 4 + $font-size-base));
+}
+
+
+/***********************************************************************************************************************
+* CSS3属性兼容性
+************************************************************************************************************************/
+/**
+* Retina屏幕
+*/
+@mixin retina() {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  //only screen and (   min--moz-device-pixel-ratio: 2),
+  //only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2)
+  //only screen and (                min-resolution: 192dpi),
+  //only screen and (                min-resolution: 2dppx)
+  {
+    @content;
+  }
+}
+
+
+/***********************************************************************************************************************
+* border相关
+************************************************************************************************************************/
+@mixin border($border:border, $color:$border-color, $width:1px) {
+  @if type-of($border) == "list" {
+    @each $name in $border {
+      #{$name}: $width solid $color;/*no*/
+    }
+  }
+  @else {
+    #{$border}: $width solid $color;/*no*/
+  }
+}
+/**
+* 1px兼容问题
+*/
+@mixin hairLine($border:border, $color:$border-color, $width:1px) {
+    border: none;
+    position: relative;
+    &::before {
+      content: '';display: block;
+      position: absolute;  top: 0;  left: 0;
+      @include border($border, $color, $width);
+      box-sizing: border-box;
+      width: 200%;  height: 200%;
+      -webkit-transform: scale(0.5);  transform: scale(0.5);
+      -webkit-transform-origin: left top;  transform-origin: left top;
+      pointer-events: none;//穿透 不然会阻止列表中的点击
+    }
+}
+
+
+/***********************************************************************************************************************
+* 标签相关
+************************************************************************************************************************/
+@mixin img{
+  & > img {
+    display: block;
+    width: 100%;
+    //height: 100%;
+  }
+}

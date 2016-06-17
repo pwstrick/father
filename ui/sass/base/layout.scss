@@ -1,0 +1,117 @@
+/*
+  布局
+*/
+@import "../helper/variable", "../helper/mixin";
+/***********************************************************************************************************************
+* 占位
+************************************************************************************************************************/
+.ui-placeholder-wrap {
+  padding-top: 31.25%;
+  position: relative;
+}
+.ui-placeholder{
+  color: $color-muted;
+  position: absolute;
+  top: 0;
+  @include flexCenter;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: $z-index-placeholder;
+}
+
+/***********************************************************************************************************************
+* 两端留白
+************************************************************************************************************************/
+[class^="ui-whitespace-"] {
+  box-sizing: border-box;
+}
+/*30px 最大*/
+.ui-whitespace-xxl{
+  padding: $wrap-padding-xxl;
+}
+.ui-whitespace-xxl-lr{
+  padding-left: $wrap-padding-xxl;padding-right: $wrap-padding-xxl;
+}
+.ui-whitespace-xxl-tb{
+  padding-top: $wrap-padding-xxl;padding-bottom: $wrap-padding-xxl;
+}
+/*25px 很大*/
+.ui-whitespace-xl{
+  padding: $wrap-padding-xl;
+}
+.ui-whitespace-xl-lr{
+  padding-left: $wrap-padding-xl;padding-right: $wrap-padding-xl;
+}
+.ui-whitespace-xl-tb{
+  padding-top: $wrap-padding-xl;padding-bottom: $wrap-padding-xl;
+}
+/*20px 大*/
+.ui-whitespace-lg{
+  padding: $wrap-padding-lg;
+}
+.ui-whitespace-lg-lr{
+  padding-left: $wrap-padding-lg;padding-right: $wrap-padding-lg;
+}
+.ui-whitespace-lg-tb{
+  padding-top: $wrap-padding-lg;padding-bottom: $wrap-padding-lg;
+}
+/*15px 中等*/
+.ui-whitespace{
+  padding: $wrap-padding;
+}
+.ui-whitespace-lr{
+  padding-left: $wrap-padding;padding-right: $wrap-padding;
+}
+.ui-whitespace-tb{
+  padding-top: $wrap-padding;padding-bottom: $wrap-padding;
+}
+/*10px 小*/
+.ui-whitespace-sm{
+  padding: $wrap-padding-sm;
+}
+.ui-whitespace-sm-lr{
+  padding-left: $wrap-padding-sm;padding-right: $wrap-padding-sm;
+}
+.ui-whitespace-sm-tb{
+  padding-top: $wrap-padding-sm;padding-bottom: $wrap-padding-sm;
+}
+/*5px 很小*/
+.ui-whitespace-xs{
+  padding: $wrap-padding-xs;
+}
+.ui-whitespace-xs-lr{
+  padding-left: $wrap-padding-xs;padding-right: $wrap-padding-xs;
+}
+.ui-whitespace-xs-tb{
+  padding-top: $wrap-padding-xs;padding-bottom: $wrap-padding-xs;
+}
+
+/***********************************************************************************************************************
+* 两端对齐
+************************************************************************************************************************/
+.ui-justify {
+  text-align: justify;
+  font-size: 0;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+  li {
+    display: inline-block;
+    text-align: center;
+  }
+  p{
+    font-size: $font-size-base;
+  }
+}
+/*弹性方式*/
+.ui-justify-flex {
+  justify-content: space-between;
+  li {
+    text-align: center;
+  }
+}

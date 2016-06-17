@@ -1,0 +1,104 @@
+@import "base/rem", "helper/mixin";
+body {
+  padding: 10px;
+}
+.demo-title {
+  color:#00A300;
+  margin-bottom:10px;
+}
+.demo-container {
+  @include hairLine(border, darken(#ccc, 50%));
+  margin-bottom:30px;
+  padding: 10px;
+}
+.demo-border {
+  @include hairLine(border, darken(#ccc, 50%));
+}
+.demo-img {
+  width: 100px;
+  height: 100px;
+  background: #CCC;
+}
+.demo-block{
+  position: relative;
+  margin-bottom: 30px;
+  .ui-header,.ui-footer{
+    position: absolute;
+  }
+  .ui-footer .ui-flex div{
+    background: none;
+    color:#000;
+  }
+  .ui-border-block {
+    text-align: center;
+    padding: $wrap-padding-lg;
+  }
+}
+.demo-display-block {
+  display: block;
+}
+.demo-margin {
+  margin: 20px 0;/*no*/
+}
+.ui-flex{
+  margin-bottom: 10px;
+}
+
+.ui-flex , .ui-fluid{
+  div {
+    background:#ccc;
+    text-align: center;
+    color:#FFF;
+    padding:5px;/*no*/
+    margin-right:5px;/*no*/
+    &:last-child{
+      margin-right:0;
+    }
+  }
+}
+//.ui-flex>section {
+//  width: 100%;
+//}
+.ui-flex-column div{
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+.demo-box{
+  height:200px;
+  border:1px solid #CCC;/*no*/
+  .demo-box-item {
+    height: 50px;
+    width: 20%;
+  }
+}
+.demo-icons{
+  overflow: hidden;
+}
+.demo-icons{
+  li {
+    float: left;
+    height:180px;
+    width:200px;
+    text-align: center;
+    i{
+      font-size:52px;/*px*/
+      line-height:54px;
+    }
+  }
+  .ui-icon,.demo-icons[class^="ui-icon-"] {
+    margin:10px;
+    color: #000;
+  }
+}
+.code, .fontclass {
+  font-size:24px;
+}
+
+.ui-flex div.demo-child {
+  background: #ff7f0d;
+  margin:2px;/*no*/
+}
+.demo-margin-top {
+  margin-top: 1.5rem;
+}
+

@@ -1,0 +1,291 @@
+@charset "UTF-8";
+
+/***********************************************************************************************************************
+* flex相关
+************************************************************************************************************************/
+
+/**
+* 工具会忽略-webkit-box-align属性
+*/
+
+/**
+* 上下左右居中
+*/
+
+/***********************************************************************************************************************
+* 文字相关
+************************************************************************************************************************/
+
+/**
+* 自动截取
+*/
+
+/**
+* Flex中自动截取
+*/
+
+/**
+* 自定义ICON
+*/
+
+/**
+* 列表中的小箭头
+*/
+
+/**
+* 列表中的小箭头 默认样式
+*/
+
+/***********************************************************************************************************************
+* CSS3属性兼容性
+************************************************************************************************************************/
+
+/**
+* Retina屏幕
+*/
+
+/***********************************************************************************************************************
+* border相关
+************************************************************************************************************************/
+
+/**
+* 1px兼容问题
+*/
+
+/***********************************************************************************************************************
+* 标签相关
+************************************************************************************************************************/
+
+/*上边框*/
+
+.ui-border-t {
+  border-top: 1px solid #e0e0e0;
+}
+
+/*下边框*/
+
+.ui-border-b {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/*上下边框*/
+
+.ui-border-tb {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/*左边框*/
+
+.ui-border-l {
+  border-left: 1px solid #e0e0e0;
+}
+
+/*右边框*/
+
+.ui-border-r {
+  border-right: 1px solid #e0e0e0;
+}
+
+/*左右边框*/
+
+.ui-border-lr {
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+}
+
+/*四个边框*/
+
+.ui-border {
+  border: 1px solid #e0e0e0;
+}
+
+.ui-border-radius {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .ui-border-t {
+    border: none;
+    position: relative;
+  }
+
+  .ui-border-t::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  .ui-border-b {
+    border: none;
+    position: relative;
+  }
+
+  .ui-border-b::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  .ui-border-tb {
+    border: none;
+    position: relative;
+  }
+
+  .ui-border-tb::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  .ui-border-l {
+    border: none;
+    position: relative;
+  }
+
+  .ui-border-l::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  .ui-border-r {
+    border: none;
+    position: relative;
+  }
+
+  .ui-border-r::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  .ui-border-lr {
+    border: none;
+    position: relative;
+  }
+
+  .ui-border-lr::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  .ui-border {
+    border: none;
+    position: relative;
+  }
+
+  .ui-border::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  .ui-border-radius {
+    border: none;
+    position: relative;
+    border-radius: 4px;
+  }
+
+  .ui-border-radius::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  .ui-border-radius::before {
+    border-radius: 8px;
+  }
+}

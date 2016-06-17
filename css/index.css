@@ -1,0 +1,1252 @@
+@charset "UTF-8";
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-touch-action: none;
+  font-size: 100%;
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+  line-height: 1.4;
+  color: #333;
+  font-size: 0.346667rem;
+  font-family: 'arial,Helvetica';
+  -webkit-user-select: none;
+  /*禁止ios和android用户选中文字*/
+  -webkit-touch-callout: none;
+  /*禁止ios 长按时不触发系统的菜单，禁止ios&android长按时下载图片*/
+  -webkit-tap-highlight-color: transparent;
+  /*去掉ios系统中元素被触摸时产生的半透明灰色遮罩*/
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 0.013333rem dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 0.533333rem;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* 表单控件重置
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  font-size: 100%;
+  outline: 0;
+  -webkit-appearance: none;
+  /*去除系统默认appearance的样式,常用于IOS下移除原生样式*/
+  background: none;
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* Custom
+   ========================================================================== */
+
+figure,
+menu,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+form,
+dl,
+dt,
+dd,
+li {
+  margin: 0;
+}
+
+/* 分割线 更好的展现样式*/
+
+hr {
+  display: block;
+  height: 0.013333rem;
+  border-top: 0.013333rem solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+  border: 0;
+}
+
+/* 下外边距10px*/
+
+/*
+  布局
+*/
+
+/***********************************************************************************************************************
+* flex相关
+************************************************************************************************************************/
+
+/**
+* 工具会忽略-webkit-box-align属性
+*/
+
+/**
+* 上下左右居中
+*/
+
+/***********************************************************************************************************************
+* 文字相关
+************************************************************************************************************************/
+
+/**
+* 自动截取
+*/
+
+/**
+* Flex中自动截取
+*/
+
+/**
+* 自定义ICON
+*/
+
+/**
+* 列表中的小箭头
+*/
+
+/**
+* 列表中的小箭头 默认样式
+*/
+
+/***********************************************************************************************************************
+* CSS3属性兼容性
+************************************************************************************************************************/
+
+/**
+* Retina屏幕
+*/
+
+/***********************************************************************************************************************
+* border相关
+************************************************************************************************************************/
+
+/**
+* 1px兼容问题
+*/
+
+/***********************************************************************************************************************
+* 标签相关
+************************************************************************************************************************/
+
+/***********************************************************************************************************************
+* 占位
+************************************************************************************************************************/
+
+.ui-placeholder-wrap {
+  padding-top: 31.25%;
+  position: relative;
+}
+
+.ui-placeholder {
+  color: #bbb;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/***********************************************************************************************************************
+* 两端留白
+************************************************************************************************************************/
+
+[class^="ui-whitespace-"] {
+  box-sizing: border-box;
+}
+
+/*30px 最大*/
+
+.ui-whitespace-xxl {
+  padding: 0.4rem;
+}
+
+.ui-whitespace-xxl-lr {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+.ui-whitespace-xxl-tb {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+/*25px 很大*/
+
+.ui-whitespace-xl {
+  padding: 0.333333rem;
+}
+
+.ui-whitespace-xl-lr {
+  padding-left: 0.333333rem;
+  padding-right: 0.333333rem;
+}
+
+.ui-whitespace-xl-tb {
+  padding-top: 0.333333rem;
+  padding-bottom: 0.333333rem;
+}
+
+/*20px 大*/
+
+.ui-whitespace-lg {
+  padding: 0.266667rem;
+}
+
+.ui-whitespace-lg-lr {
+  padding-left: 0.266667rem;
+  padding-right: 0.266667rem;
+}
+
+.ui-whitespace-lg-tb {
+  padding-top: 0.266667rem;
+  padding-bottom: 0.266667rem;
+}
+
+/*15px 中等*/
+
+.ui-whitespace {
+  padding: 0.2rem;
+}
+
+.ui-whitespace-lr {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.ui-whitespace-tb {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+/*10px 小*/
+
+.ui-whitespace-sm {
+  padding: 0.133333rem;
+}
+
+.ui-whitespace-sm-lr {
+  padding-left: 0.133333rem;
+  padding-right: 0.133333rem;
+}
+
+.ui-whitespace-sm-tb {
+  padding-top: 0.133333rem;
+  padding-bottom: 0.133333rem;
+}
+
+/*5px 很小*/
+
+.ui-whitespace-xs {
+  padding: 0.066667rem;
+}
+
+.ui-whitespace-xs-lr {
+  padding-left: 0.066667rem;
+  padding-right: 0.066667rem;
+}
+
+.ui-whitespace-xs-tb {
+  padding-top: 0.066667rem;
+  padding-bottom: 0.066667rem;
+}
+
+/***********************************************************************************************************************
+* 两端对齐
+************************************************************************************************************************/
+
+.ui-justify {
+  text-align: justify;
+  font-size: 0;
+}
+
+.ui-justify:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.ui-justify li {
+  display: inline-block;
+  text-align: center;
+}
+
+.ui-justify p {
+  font-size: 0.346667rem;
+}
+
+/*弹性方式*/
+
+.ui-justify-flex {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ui-justify-flex li {
+  text-align: center;
+}
+
+/***********************************************************************************************************************
+* flex相关
+************************************************************************************************************************/
+
+/**
+* 工具会忽略-webkit-box-align属性
+*/
+
+/**
+* 上下左右居中
+*/
+
+/***********************************************************************************************************************
+* 文字相关
+************************************************************************************************************************/
+
+/**
+* 自动截取
+*/
+
+/**
+* Flex中自动截取
+*/
+
+/**
+* 自定义ICON
+*/
+
+/**
+* 列表中的小箭头
+*/
+
+/**
+* 列表中的小箭头 默认样式
+*/
+
+/***********************************************************************************************************************
+* CSS3属性兼容性
+************************************************************************************************************************/
+
+/**
+* Retina屏幕
+*/
+
+/***********************************************************************************************************************
+* border相关
+************************************************************************************************************************/
+
+/**
+* 1px兼容问题
+*/
+
+/***********************************************************************************************************************
+* 标签相关
+************************************************************************************************************************/
+
+.ui-loading-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.ui-loading-wrap p {
+  margin: 0 0.133333rem 0 0;
+}
+
+.ui-loading {
+  width: 0.533333rem;
+  height: 0.533333rem;
+  display: inline-block;
+  border: #c7c7c7 solid 3px;
+  border-top-color: transparent;
+  border-radius: 100%;
+  -webkit-animation: border-rotate 1s linear infinite;
+          animation: border-rotate 1s linear infinite;
+}
+
+@-webkit-keyframes border-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes border-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+body {
+  background: #f0d149 url(../img/bac.png) repeat;
+}
+
+.ui-loading-wrap {
+  top: 45%;
+  left: 50%;
+  position: absolute;
+  z-index: 10;
+  width: 4rem;
+  margin-left: -2rem;
+  margin-top: -0.666667rem;
+  padding: 0.666667rem 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #FFF;
+  border-radius: 0.133333rem;
+}
+
+.ui-loading-wrap .ui-loading {
+  margin-right: 0.133333rem;
+}
+
+/**
+* 底部
+*/
+
+.footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  height: 1.333333rem;
+  background: url(../img/bac-bottom.png) repeat-x left bottom;
+  z-index: -1;
+}
+
+#download {
+  box-sizing: border-box;
+  padding: 0.266667rem 0.4rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  height: 1.6rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6) url("../img/download.png") no-repeat;
+  background-origin: content-box;
+  background-size: contain;
+  text-align: right;
+}
+
+/**
+* 屏幕内容
+*/
+
+.section {
+  margin: 0.533333rem;
+  position: relative;
+  text-align: center;
+}
+
+.section .slogan {
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.section .father-img {
+  width: 80%;
+  padding-top: 1.2rem;
+}
+
+.section .frame {
+  border: 3px solid #4b240d;
+  width: 7.733333rem;
+  height: 9.333333rem;
+  margin: 0 auto 0.4rem;
+  box-sizing: border-box;
+  background: #FFF;
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+}
+
+.section .frame .frame-inner {
+  margin: 0.266667rem;
+  overflow: hidden;
+}
+
+.section .frame .word {
+  position: absolute;
+  top: 0.266667rem;
+  left: 0.2rem;
+  width: 95%;
+  z-index: 2;
+}
+
+.section .frame .frame-img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.section .ui-justify {
+  margin: 0 0.4rem;
+}
+
+.section .h6 {
+  color: #333;
+  margin-bottom: 0.133333rem;
+}
+
+[data-dpr="1"] .section .h6 {
+  font-size: 12px;
+}
+
+[data-dpr="2"] .section .h6 {
+  font-size: 24px;
+}
+
+[data-dpr="3"] .section .h6 {
+  font-size: 36px;
+}
+
+.section-top {
+  padding-top: 0.533333rem;
+}
+
+.section-top2 {
+  padding-top: 1.066667rem;
+}
+
+/**
+* 弹出框
+*/
+
+.dialog {
+  position: absolute;
+  top: 30%;
+  left: 12.5%;
+  background: rgba(0, 0, 0, 0.7);
+  width: 75%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 0.533333rem;
+  text-align: center;
+  font-size: 0.426667rem;
+  color: #FFF;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.zoomIn {
+  -webkit-animation: zoomIn .5s backwards;
+          animation: zoomIn .5s backwards;
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1);
+            transform: scale3d(0.1, 0.1, 0.1);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1);
+            transform: scale3d(0.1, 0.1, 0.1);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/**
+* 小工具
+*/
+
+.db-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/**
+* 按钮
+*/
+
+button,
+#btnDownload,
+.file {
+  background: url("../img/buttons.png") no-repeat left top;
+  border: 0;
+  background-size: 4.8rem auto;
+  color: #FFF;
+  font-weight: bold;
+  display: inline-block;
+}
+
+[data-dpr="1"] button,
+[data-dpr="1"] #btnDownload,
+[data-dpr="1"] .file {
+  text-shadow: 2px 2px #c44911;
+  font-size: 17px;
+}
+
+[data-dpr="2"] button,
+[data-dpr="2"] #btnDownload,
+[data-dpr="2"] .file {
+  text-shadow: 4px 4px #c44911;
+  font-size: 34px;
+}
+
+[data-dpr="3"] button,
+[data-dpr="3"] #btnDownload,
+[data-dpr="3"] .file {
+  text-shadow: 6px 6px #c44911;
+  font-size: 51px;
+}
+
+.btn-large-x {
+  width: 4.8rem;
+  height: 1.333333rem;
+  padding-bottom: 0.266667rem;
+  margin-top: 0.4rem;
+  position: relative;
+}
+
+.btn-large-x input[type=file] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+#btnDownload {
+  width: 1.866667rem;
+  height: 1.066667rem;
+  background-position: 0 100%;
+}
+
+.btn-middle {
+  width: 2.133333rem;
+  height: 1.466667rem;
+  background-position: 0 70.27027%;
+}
+
+.btn-large {
+  width: 3.333333rem;
+  height: 1.733333rem;
+  background-position: 0 32.85714%;
+}
+
+[data-dpr="1"] .btn-large h1 {
+  font-size: 13px;
+}
+
+[data-dpr="2"] .btn-large h1 {
+  font-size: 26px;
+}
+
+[data-dpr="3"] .btn-large h1 {
+  font-size: 39px;
+}
+
+[data-dpr="1"] .btn-large h2 {
+  font-size: 11px;
+}
+
+[data-dpr="2"] .btn-large h2 {
+  font-size: 22px;
+}
+
+[data-dpr="3"] .btn-large h2 {
+  font-size: 33px;
+}
+
+/**
+* 音乐
+*/
+
+#music {
+  width: 0.8rem;
+  height: 0.8rem;
+  z-index: 3;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  border-radius: 100%;
+  background: #de833a url(../img/music.png) no-repeat 40% center;
+  background-size: 60% 60%;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+[data-dpr="1"] #music {
+  border: 2px solid #140f0e;
+  box-shadow: 0 0 0 1px #f0d149 inset;
+}
+
+[data-dpr="2"] #music {
+  border: 4px solid #140f0e;
+  box-shadow: 0 0 0 2px #f0d149 inset;
+}
+
+[data-dpr="3"] #music {
+  border: 6px solid #140f0e;
+  box-shadow: 0 0 0 3px #f0d149 inset;
+}
+
+#audio {
+  display: none;
+}
+
+.music-rotate {
+  -webkit-animation: rotate360 3s linear infinite;
+          animation: rotate360 3s linear infinite;
+}
+
+@-webkit-keyframes rotate360 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate360 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.music-pulse {
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}

@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+/*
+  布局
+*/
+
+/***********************************************************************************************************************
+* flex相关
+************************************************************************************************************************/
+
+/**
+* 工具会忽略-webkit-box-align属性
+*/
+
+/**
+* 上下左右居中
+*/
+
+/***********************************************************************************************************************
+* 文字相关
+************************************************************************************************************************/
+
+/**
+* 自动截取
+*/
+
+/**
+* Flex中自动截取
+*/
+
+/**
+* 自定义ICON
+*/
+
+/**
+* 列表中的小箭头
+*/
+
+/**
+* 列表中的小箭头 默认样式
+*/
+
+/***********************************************************************************************************************
+* CSS3属性兼容性
+************************************************************************************************************************/
+
+/**
+* Retina屏幕
+*/
+
+/***********************************************************************************************************************
+* border相关
+************************************************************************************************************************/
+
+/**
+* 1px兼容问题
+*/
+
+/***********************************************************************************************************************
+* 标签相关
+************************************************************************************************************************/
+
+/***********************************************************************************************************************
+* 占位
+************************************************************************************************************************/
+
+.ui-placeholder-wrap {
+  padding-top: 31.25%;
+  position: relative;
+}
+
+.ui-placeholder {
+  color: #bbb;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/***********************************************************************************************************************
+* 两端留白
+************************************************************************************************************************/
+
+[class^="ui-whitespace-"] {
+  box-sizing: border-box;
+}
+
+/*30px 最大*/
+
+.ui-whitespace-xxl {
+  padding: 0.4rem;
+}
+
+.ui-whitespace-xxl-lr {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+.ui-whitespace-xxl-tb {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+/*25px 很大*/
+
+.ui-whitespace-xl {
+  padding: 0.333333rem;
+}
+
+.ui-whitespace-xl-lr {
+  padding-left: 0.333333rem;
+  padding-right: 0.333333rem;
+}
+
+.ui-whitespace-xl-tb {
+  padding-top: 0.333333rem;
+  padding-bottom: 0.333333rem;
+}
+
+/*20px 大*/
+
+.ui-whitespace-lg {
+  padding: 0.266667rem;
+}
+
+.ui-whitespace-lg-lr {
+  padding-left: 0.266667rem;
+  padding-right: 0.266667rem;
+}
+
+.ui-whitespace-lg-tb {
+  padding-top: 0.266667rem;
+  padding-bottom: 0.266667rem;
+}
+
+/*15px 中等*/
+
+.ui-whitespace {
+  padding: 0.2rem;
+}
+
+.ui-whitespace-lr {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.ui-whitespace-tb {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+/*10px 小*/
+
+.ui-whitespace-sm {
+  padding: 0.133333rem;
+}
+
+.ui-whitespace-sm-lr {
+  padding-left: 0.133333rem;
+  padding-right: 0.133333rem;
+}
+
+.ui-whitespace-sm-tb {
+  padding-top: 0.133333rem;
+  padding-bottom: 0.133333rem;
+}
+
+/*5px 很小*/
+
+.ui-whitespace-xs {
+  padding: 0.066667rem;
+}
+
+.ui-whitespace-xs-lr {
+  padding-left: 0.066667rem;
+  padding-right: 0.066667rem;
+}
+
+.ui-whitespace-xs-tb {
+  padding-top: 0.066667rem;
+  padding-bottom: 0.066667rem;
+}
+
+/***********************************************************************************************************************
+* 两端对齐
+************************************************************************************************************************/
+
+.ui-justify {
+  text-align: justify;
+  font-size: 0;
+}
+
+.ui-justify:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.ui-justify li {
+  display: inline-block;
+  text-align: center;
+}
+
+.ui-justify p {
+  font-size: 0.346667rem;
+}
+
+/*弹性方式*/
+
+.ui-justify-flex {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ui-justify-flex li {
+  text-align: center;
+}

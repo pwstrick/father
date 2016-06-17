@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+/***********************************************************************************************************************
+* flex相关
+************************************************************************************************************************/
+
+/**
+* 工具会忽略-webkit-box-align属性
+*/
+
+/**
+* 上下左右居中
+*/
+
+/***********************************************************************************************************************
+* 文字相关
+************************************************************************************************************************/
+
+/**
+* 自动截取
+*/
+
+/**
+* Flex中自动截取
+*/
+
+/**
+* 自定义ICON
+*/
+
+/**
+* 列表中的小箭头
+*/
+
+/**
+* 列表中的小箭头 默认样式
+*/
+
+/***********************************************************************************************************************
+* CSS3属性兼容性
+************************************************************************************************************************/
+
+/**
+* Retina屏幕
+*/
+
+/***********************************************************************************************************************
+* border相关
+************************************************************************************************************************/
+
+/**
+* 1px兼容问题
+*/
+
+/***********************************************************************************************************************
+* 标签相关
+************************************************************************************************************************/
+
+body {
+  padding: 0.133333rem;
+}
+
+.demo-title {
+  color: #00A300;
+  margin-bottom: 0.133333rem;
+}
+
+.demo-container {
+  border: none;
+  position: relative;
+  margin-bottom: 0.4rem;
+  padding: 0.133333rem;
+}
+
+.demo-container::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #4d4d4d;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  pointer-events: none;
+}
+
+.demo-border {
+  border: none;
+  position: relative;
+}
+
+.demo-border::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #4d4d4d;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  pointer-events: none;
+}
+
+.demo-img {
+  width: 1.333333rem;
+  height: 1.333333rem;
+  background: #CCC;
+}
+
+.demo-block {
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+
+.demo-block .ui-header,
+.demo-block .ui-footer {
+  position: absolute;
+}
+
+.demo-block .ui-footer .ui-flex div {
+  background: none;
+  color: #000;
+}
+
+.demo-block .ui-border-block {
+  text-align: center;
+  padding: 0.266667rem;
+}
+
+.demo-display-block {
+  display: block;
+}
+
+.demo-margin {
+  margin: 20px 0;
+}
+
+.ui-flex {
+  margin-bottom: 0.133333rem;
+}
+
+.ui-flex div,
+.ui-fluid div {
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.ui-flex div:last-child,
+.ui-fluid div:last-child {
+  margin-right: 0;
+}
+
+.ui-flex-column div {
+  margin-right: 0;
+  margin-bottom: 0.133333rem;
+}
+
+.demo-box {
+  height: 2.666667rem;
+  border: 1px solid #CCC;
+}
+
+.demo-box .demo-box-item {
+  height: 0.666667rem;
+  width: 20%;
+}
+
+.demo-icons {
+  overflow: hidden;
+}
+
+.demo-icons li {
+  float: left;
+  height: 2.4rem;
+  width: 2.666667rem;
+  text-align: center;
+}
+
+.demo-icons li i {
+  line-height: 0.72rem;
+}
+
+[data-dpr="1"] .demo-icons li i {
+  font-size: 26px;
+}
+
+[data-dpr="2"] .demo-icons li i {
+  font-size: 52px;
+}
+
+[data-dpr="3"] .demo-icons li i {
+  font-size: 78px;
+}
+
+.demo-icons .ui-icon,
+.demo-icons .demo-icons[class^="ui-icon-"] {
+  margin: 0.133333rem;
+  color: #000;
+}
+
+.code,
+.fontclass {
+  font-size: 0.32rem;
+}
+
+.ui-flex div.demo-child {
+  background: #ff7f0d;
+  margin: 2px;
+}
+
+.demo-margin-top {
+  margin-top: 1.5rem;
+}

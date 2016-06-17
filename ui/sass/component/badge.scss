@@ -1,0 +1,38 @@
+@import "../helper/variable", "../helper/mixin";
+%badge{
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  background-clip: padding-box;
+}
+
+@mixin _badge($name, $color, $padding:0 6px, $radius:8px) {
+  .ui-badge-#{$name}{
+    @extend %badge;
+    border-radius: $radius;
+    padding: $padding;
+    background: $color;
+  }
+}
+@include _badge(important, $color-important);
+@include _badge(success, $color-success);
+@include _badge(warning, $color-warning);
+
+//右上角小点
+//.ui-badge-wrap{
+//  position: relative;
+//  text-align: center;
+//}
+//.ui-badge-corner{
+//  @extend %badge;
+//  position: absolute;
+//  top: -4px;
+//  right: -9px;
+//}
+//.ui-badge-corner-num{
+//  @extend %badge;
+//  position: absolute;
+//  -webkit-border-radius: 10px;
+//  top: -5px;
+//  right: -5px;
+//}

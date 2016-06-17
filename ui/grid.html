@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/core/flexible.js"></script>
+    <title>网格</title>
+    <link href="css/all.css" rel="stylesheet"/>
+    <link href="css/demo.css" rel="stylesheet"/>
+</head>
+<body>
+    <h4 class="demo-title">flex网格横向排列</h4>
+    <h6>(flex grid horizontal arrangement)</h6>
+    <section class="ui-flex">
+        <div class="ui-col-1">1</div>
+        <div class="ui-col-2">2</div>
+        <div class="ui-col-3">3</div>
+        <div class="ui-col-4">4</div>
+        <div class="ui-col-5">5</div>
+    </section>
+    <section class="ui-flex ui-flex-row-between">
+        <div class="ui-width-10">10</div>
+        <div class="ui-width-14">14</div>
+    </section>
+    <h4 class="demo-title demo-margin-top">flex网格纵向排列</h4>
+    <h6>(flex grid vertical arrangement)</h6>
+    <section class="ui-flex ui-flex-column">
+        <div class="ui-col-1">1</div>
+        <div class="ui-col-1">2</div>
+        <div class="ui-col-1">3</div>
+    </section>
+    <h4 class="demo-title demo-margin-top">flex多行垂直居中【Android中UC与微信等浏览器不支持换行，WebView支持】</h4>
+    <h6>(Flex multi line vertical center)</h6>
+    <section class="ui-flex ui-flex-columns-center ui-flex-wrap ui-flex-row-between demo-box" style="display:none">
+        <div class="ui-width-10">1</div>
+        <div class="ui-width-10">2</div>
+        <div class="ui-width-10">3</div>
+    </section>
+    <h4 class="demo-title demo-margin-top">flex单行垂直居中</h4>
+    <h6>(flex single line vertical center)</h6>
+    <section class="ui-flex ui-flex-column-center demo-box">
+        <div style="width: 46%">1</div>
+        <div style="width: 46%">2</div>
+    </section>
+    <h4 class="demo-title demo-margin-top">flex水平居中</h4>
+    <h6>(flex level center)</h6>
+    <section class="ui-flex ui-flex-row-center demo-box">
+        <div class="demo-box-item">1</div>
+        <div class="demo-box-item">2</div>
+    </section>
+    <h4 class="demo-title demo-margin-top">flex嵌套</h4>
+    <h6>(Nested flex)</h6>
+    <section class="ui-flex ui-flex-row-between">
+        <div class="ui-width-10 ui-flex">
+            <div class="ui-col-1 demo-child">1</div>
+            <div class="ui-col-1 demo-child">2</div>
+            <div class="ui-col-1 demo-child">3</div>
+        </div>
+        <div class="ui-width-13 ui-flex">
+            <div class="ui-width-5 demo-child">1</div>
+            <div class="ui-width-5 demo-child">2</div>
+            <div class="ui-width-5 demo-child">3</div>
+        </div>
+    </section>
+    <h4 class="demo-title demo-margin-top">flex嵌套行内标签</h4>
+    <h6>(flex nested inline Tags)</h6>
+    <section class="ui-flex ui-flex-row-between">
+        <a href="#" class="ui-width-db-10"><img width="100%" src="assets/img/bac.jpg"/></a>
+        <a href="#" class="ui-width-db-10"><img width="100%" src="assets/img/bac.jpg"/></a>
+    </section>
+    <h4 class="demo-title demo-margin-top">float流布局</h4>
+    <h6>(float flow layout)</h6>
+    <section class="ui-fluid">
+        <div class="ui-width-1">1</div>
+        <div class="ui-width-2">2</div>
+        <div class="ui-width-3">3</div>
+        <div class="ui-width-4">4</div>
+        <div class="ui-width-5">5</div>
+    </section>
+    <h4 class="demo-title">flex百分比宽度(flex percentage width)</h4>
+    <h4 class="demo-title">左偏移(left offset)</h4>
+    <h4 class="demo-title">左移动(left move)</h4>
+    <h4 class="demo-title">右移动(left move)【24种】</h4>
+    <section class="ui-flex">
+        <div class="ui-width-1">1</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-2">2</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-3">3</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-4">4</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-5">5</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-6">6</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-7">7</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-8">8</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-9">9</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-10">10</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-11">11</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-12">12</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-13">13</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-14">14</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-15">15</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-16">16</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-17">17</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-18">18</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-19">19</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-20">20</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-21">21</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-22">22</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-23">23</div>
+    </section>
+    <section class="ui-flex">
+        <div class="ui-width-24">24</div>
+    </section>
+
+</body>
+</html>

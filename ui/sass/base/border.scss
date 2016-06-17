@@ -1,0 +1,74 @@
+@import "../helper/variable", "../helper/mixin";
+
+@mixin borderSelf($border, $radius:0, $radius-after:0) {
+  @include hairLine($border-color, $border, 1px, $radius, $radius-after);
+}
+//retina屏幕
+@mixin borderSelfRetina($border, $radius:0, $radius-after:0) {
+  @include hairLine($border-color, $border, 1px, $radius, $radius-after);
+}
+/*上边框*/
+.ui-border-t {
+  @include border(border-top);
+}
+/*下边框*/
+.ui-border-b {
+  @include border(border-bottom);
+}
+/*上下边框*/
+.ui-border-tb{
+  @include border((border-top,border-bottom));
+}
+
+/*左边框*/
+.ui-border-l{
+  @include border(border-left);
+}
+/*右边框*/
+.ui-border-r {
+  @include border(border-right);
+}
+/*左右边框*/
+.ui-border-lr{
+  @include border((border-left,border-right));
+}
+/*四个边框*/
+.ui-border {
+  @include border();
+}
+
+.ui-border-radius {
+  @include border();
+  border-radius: $border-radius-base;/*no*/
+}
+
+@include retina {
+  .ui-border-t {
+    @include hairLine(border-top);
+  }
+  .ui-border-b {
+    @include hairLine(border-bottom);
+  }
+  .ui-border-tb{
+    @include hairLine((border-top,border-bottom));
+  }
+  .ui-border-l{
+    @include hairLine(border-left);
+  }
+  .ui-border-r {
+    @include hairLine(border-right);
+  }
+  .ui-border-lr{
+    @include hairLine((border-left,border-right));
+  }
+  .ui-border {
+    @include hairLine();
+  }
+  .ui-border-radius {
+    @include hairLine();
+    border-radius: $border-radius-base;/*no*/
+    &::before {
+      border-radius: $border-radius-lg;/*no*/
+    }
+  }
+};
