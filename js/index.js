@@ -76,7 +76,7 @@ Zepto(function() {
         var clone = this.cloneNode(true);
         clone.onchange = arguments.callee; //克隆不会复制动态绑定事件
         clone.value = '';
-        upload.parentNode.replaceChild(clone, upload);
+        this.parentNode.replaceChild(clone, this);
     });
 
     /**
