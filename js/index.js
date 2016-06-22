@@ -55,9 +55,11 @@ Zepto(function() {
 
             var img  = new Image();
             img.onload = function() {
-                var src = poster.filterImage(img, this.width, this.height);//IOS中如果图片过大，将不能画在canvas中
+                var src = poster.filterImage(img, this.width, this.height);//将图片进行压缩，减少页面大小
+                //var src = base64;
                 $frameImg.data('width', this.width);//实际宽度
                 $frameImg.data('height', this.height);//实际高度
+
                 var realImg = new Image();
                 realImg.onload = function() {
                     $frameImg.attr('src', realImg.src);//三次载入Base64数据
@@ -67,7 +69,6 @@ Zepto(function() {
                 realImg.src = src;
                 rotates[0] = {src:src, width:this.width, height:this.height, image:realImg};//用于旋转的缓存
             };
-            //img.src = 'img/word.png'
             img.src = base64;
         };
 
@@ -260,7 +261,7 @@ var poster = {
         return (window.devicePixelRatio || 1) / backingstore;
     },
     /**
-     * 将选中的图片放入Canvas中，防止在IOS中由于图片太大而不显示
+     * 将图片进行压缩，减少页面大小
      * 旋转操作也放在此处
      */
     filterImage: function(image, width, height, deg) {
