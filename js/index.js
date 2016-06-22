@@ -70,7 +70,13 @@ Zepto(function() {
             };
             //img.src = 'img/word.png'
             img.src = base64;
-        }
+        };
+
+        //解决上传相同文件不触发onchange事件
+        var clone = this.cloneNode(true);
+        clone.onchange = arguments.callee; //克隆不会复制动态绑定事件
+        clone.value = '';
+        upload.parentNode.replaceChild(clone, upload);
     });
 
     /**
@@ -105,7 +111,6 @@ Zepto(function() {
         //生成一张新图片 不能直接用$frameImg会出现变形
         var img = new Image();
         img.onload = function() {
-            //此处图片需跨域
             var src = poster.filterImage(this, $frameImg.data('height'), $frameImg.data('width'), 90);
             var realImg = new Image();
             realImg.onload = function() {
