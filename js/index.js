@@ -1,6 +1,5 @@
 var $ = require('./zepto');
 var dom = require('./common/dom');
-var url = require('./common/url');
 
 var $music = $('#music'),
     $audio = $('#audio'),
