@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hidpi-canvas插件展示</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+</head>
+<body>
+    <canvas id="demo" width="200" height="100" style="border:1px solid #000"></canvas>
+    <div id="container"></div>
+    <canvas id="demo2" width="200" height="100" style="border:1px solid #000"></canvas>
+    <div id="container2"></div>
+    <script>
+        var canvas2 = document.getElementById('demo2');
+        var ctx2 = canvas2.getContext('2d');
+        var container2 = document.getElementById('container2');
+        ctx2.font = "16px serif";
+        ctx2.fillStyle = '#000';
+        ctx2.fillText('原生的canvas', 0, 50);
+        ctx2.beginPath();ctx2.moveTo(50,140);ctx2.lineTo(140,50);ctx2.stroke();
+        ctx2.save();
+
+        container2.innerHTML += 'Width:'+canvas2.width+'<br/>';
+        container2.innerHTML += 'Height:'+canvas2.height+'<br/>';
+    </script>
+
+    <script src="build/js/hidpi-canvas.js"></script>
+    <script>
+        var canvas = document.getElementById('demo');
+        var ctx = canvas.getContext('2d');
+        var backingStore = ctx.backingStorePixelRatio ||
+                ctx.webkitBackingStorePixelRatio ||
+                ctx.mozBackingStorePixelRatio ||
+                ctx.msBackingStorePixelRatio ||
+                ctx.oBackingStorePixelRatio ||
+                ctx.backingStorePixelRatio || 1;
+
+        var ratio = (window.devicePixelRatio || 1) / backingStore;
+
+        var container = document.getElementById('container');
+        ctx.font = "16px serif";
+        ctx.fillStyle = '#000';
+        ctx.fillText('hidpi配置后的canvas', 0, 50);
+        ctx.beginPath();ctx.moveTo(50,140);ctx.lineTo(140,50);ctx.stroke();
+        ctx.save();
+
+        container.innerHTML += 'Ratio:'+ratio+'<br/>';//页面像素比与Canvas缓冲区像素比
+        container.innerHTML += 'CSS Width:'+canvas.style.width+'<br/>';
+        container.innerHTML += 'CSS Height:'+canvas.style.height+'<br/>';
+        container.innerHTML += 'Width:'+canvas.width+'<br/>';//会被放大
+        container.innerHTML += 'Height:'+canvas.height+'<br/>';//会被放大
+    </script>
+</body>
+</html>

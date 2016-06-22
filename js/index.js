@@ -255,6 +255,7 @@ function audioControl() {
 var poster = {
     /**
      * devicePixelRatio设备像素比 webkitBackingStorePixelRatio Canvas缓冲区的像素比
+     * 将canvas中的1像素等于屏幕中的1像素
      */
     pixelRatio: function(ctx) {
         var backingstore = ctx.webkitBackingStorePixelRatio|| 1;
@@ -268,7 +269,8 @@ var poster = {
         var canvas = document.createElement('canvas');
         var pr = this.pixelRatio(canvas.getContext('2d'));
 
-        canvas.width = width / pr;//回复为原先的大小
+        //hidpi-canvas将canvas的width和height属性放大pr倍
+        canvas.width = width / pr;//恢复为原先的大小
         canvas.height = height / pr;
 
         var ctx = canvas.getContext('2d');
