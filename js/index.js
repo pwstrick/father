@@ -62,7 +62,7 @@ Zepto(function() {
 
                 var realImg = new Image();
                 realImg.onload = function() {
-                    $frameImg.attr('src', realImg.src);//三次载入Base64数据
+                    $frameImg.attr('src', realImg.src);//第三次载入Base64数据
                     next($first);//显示第二屏
                     endLoading();
                 };
