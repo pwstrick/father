@@ -157,12 +157,15 @@
 	        //生成一张新图片 不能直接用$frameImg会出现变形
 	        var img = new Image();
 	        img.onload = function() {
-	            var src = poster.filterImage(this, $frameImg.data('height'), $frameImg.data('width'), 90);
+	            var width = $frameImg.data('height'),
+	                height = $frameImg.data('width');
+	            //此处图片需跨域
+	            var src = poster.filterImage(this, width, height, 90);
 	            var realImg = new Image();
 	            realImg.onload = function() {
-	                rotates[direction] = {src:src, width:this.width, height:this.height, image:realImg};//缓存
-	                $frameImg.data('width', this.width);
-	                $frameImg.data('height', this.height);
+	                rotates[direction] = {src:src, width:width, height:height, image:realImg};//缓存
+	                $frameImg.data('width', width);
+	                $frameImg.data('height', height);
 	                $frameImg.attr('src', realImg.src);
 	                endLoading();
 	            };
@@ -326,7 +329,7 @@
 	            ctx.rotate(deg * Math.PI / 180);
 	            ctx.drawImage(image, 0, -canvas.width);
 	        }else {
-	            ctx.drawImage(image, 0, 0, width, height);
+	            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 	        }
 
 	        return canvas.toDataURL('image/jpeg', 0.7);
